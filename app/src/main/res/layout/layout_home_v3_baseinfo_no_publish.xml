@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="101.5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_verify"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="43dp"
+            android:src="@mipmap/ic_home_v3_verify"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="@string/home_v3_verify"
+            android:textColor="@color/text_dark_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_verify"
+            app:layout_constraintLeft_toRightOf="@id/iv_verify"
+            app:layout_constraintTop_toTopOf="@id/iv_verify" />
+
+        <ImageView
+            android:id="@+id/iv_equity"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:src="@mipmap/ic_home_v3_equity"
+            app:layout_constraintRight_toLeftOf="@+id/tv_equity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_equity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/home_v3_equity"
+            android:textColor="@color/c_666666"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_equity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_equity" />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="39.5dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bg_home_v3_publish_btn"
+            android:gravity="center"
+            android:text="@string/home_v3_publish"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_verify" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/home_v3_base_info_tip"
+            android:textColor="@color/c_999999"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_publish" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

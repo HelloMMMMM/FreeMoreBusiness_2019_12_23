@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.merchant.about.vm.VMAbout"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF9F9F9">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_marginTop="36dip"
+            android:src="@mipmap/icons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:text="会员免费尊享"
+            android:textColor="#FF333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img"/>
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="0dip"
+            android:layout_height="48dip"
+            android:layout_marginTop="30dip"
+            android:background="@android:color/white"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="协议与声明"
+            android:textColor="#FF202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tips"/>
+
+        <View
+            android:id="@+id/v_split"
+            android:layout_width="0dip"
+            android:layout_height="6dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_protocol"/>
+
+        <TextView
+            android:id="@+id/tv_update_tips"
+            android:layout_width="0dip"
+            android:layout_height="48dip"
+            android:background="@android:color/white"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="版本更新"
+            android:textColor="#FF202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_split"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

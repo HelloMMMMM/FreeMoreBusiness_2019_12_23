@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="String"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="88dip"
+        android:background="@android:color/white"
+        android:minHeight="88dip">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="93dip"
+            android:layout_height="62dip"
+            android:layout_marginLeft="15dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/fl_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ic_hot"
+                android:drawablePadding="5dip"
+                android:gravity="center_vertical"
+                android:text="属于你的汽车套餐"
+                android:textColor="@color/text_dark_black"
+                android:textSize="15sp"
+                tools:text="属于你的汽车套餐"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dip"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"
+            android:maxLines="2"
+            android:text="一站式服务，洗车，打蜡，美容...豪华套餐等你来选!"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img"
+            app:layout_constraintEnd_toEndOf="@+id/fl_name"
+            app:layout_constraintStart_toStartOf="@+id/fl_name"
+            tools:text="一站式服务，洗车，打蜡，美容...豪华套餐等你来选!"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

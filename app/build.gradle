@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    signingConfigs {
+        // your debug keystore
+        config {
+            keyAlias 'fx'
+            keyPassword '123456'
+            storeFile file('feemore.jks')
+            storePassword '123456'
+        }
+        configSign {
+            keyAlias 'fx'
+            keyPassword '123456'
+            storeFile file('feemore.jks')
+            storePassword '123456'
+        }
+    }
+    defaultConfig {
+        applicationId "com.fx.feemore.business"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 10
+        versionName "1.0.9"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        signingConfig signingConfigs.configSign
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi-v7a', 'x86'//, 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "4e811be4a43494c9abc05a1f", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.configSign
+        }
+        debug {
+            signingConfig signingConfigs.configSign
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+    productFlavors {
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$android_support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "com.android.support:recyclerview-v7:$android_support_version"
+
+    // Android架构组件
+    implementation "android.arch.lifecycle:runtime:$lifecycle_version"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+
+    // Dagger2
+    implementation "com.google.dagger:dagger:$dagger2_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger2_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger2_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger2_version"
+
+    // RxJava2
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation("io.reactivex.rxjava2:rxandroid:$rxandroid_version", {
+        exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+    })
+
+    //leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    implementation project(':baselib')
+    implementation "com.android.support:cardview-v7:$android_support_version"
+    implementation "com.android.support:design:$android_support_version"
+    implementation('com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.41') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    //进度指示器
+    implementation 'com.github.baoyachi:StepView:1.9'
+
+    //滚轮控件
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+    implementation project(path: ':selectimage')
+
+    //开关控件
+    implementation('com.github.zcweng:switch-button:0.0.3@aar') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
+    //使用微信分享、登录、收藏、支付等功能需要的库以及文件
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    //支付宝支付
+    implementation(name: 'alipaySdk-15.5.9-20181123210657-noUtdid', ext: 'aar')
+    //二维码组件
+    implementation 'com.king.zxing:zxing-lite:1.0.5'
+
+    //极光
+    implementation 'cn.jiguang.sdk:jpush:3.2.0'  // 此处以JPush 3.2.0 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.6'  // 此处以JCore 1.2.5 版本为例。
+
+
+    //滑动删除
+    implementation("com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0")
+            {
+                exclude group: 'com.android.support'
+            }
+
+    implementation 'me.jessyan:autosize:1.1.2'
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+}

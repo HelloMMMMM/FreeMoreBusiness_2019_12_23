@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/ic_pay_checked" android:state_selected="true"/>
+    <item>
+        <shape android:shape="oval">
+            <size android:width="@dimen/pay_deposit_item_check_size" android:height="@dimen/pay_deposit_item_check_size"/>
+            <stroke android:width="@dimen/line" android:color="@color/pay_deposit_uncheck_stroke"/>
+        </shape>
+    </item>
+</selector>

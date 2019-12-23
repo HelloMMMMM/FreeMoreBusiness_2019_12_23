@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="101.5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_my_data_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="@string/home_v3_base_info_my_data_title"
+            android:textColor="@color/c_333333"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="4dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/ic_home_v3_base_info_my_data_left_line"
+            app:layout_constraintBottom_toBottomOf="@id/tv_my_data_title"
+            app:layout_constraintRight_toLeftOf="@id/tv_my_data_title"
+            app:layout_constraintTop_toTopOf="@id/tv_my_data_title" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/ic_home_v3_base_info_my_data_right_line"
+            app:layout_constraintBottom_toBottomOf="@id/tv_my_data_title"
+            app:layout_constraintLeft_toRightOf="@id/tv_my_data_title"
+            app:layout_constraintTop_toTopOf="@id/tv_my_data_title" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_data_1"
+            android:layout_width="102dp"
+            android:layout_height="57.5dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="54.5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/my_data_2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_data_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/c_333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:text="@string/home_v3_base_info_my_data_1"
+                android:textColor="@color/c_999999"
+                android:textSize="11sp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_data_2"
+            android:layout_width="102dp"
+            android:layout_height="57.5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="54.5dp"
+            app:layout_constraintLeft_toRightOf="@id/my_data_1"
+            app:layout_constraintRight_toLeftOf="@id/my_data_3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_data_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/c_333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:text="@string/home_v3_base_info_my_data_2"
+                android:textColor="@color/c_999999"
+                android:textSize="11sp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_data_3"
+            android:layout_width="102dp"
+            android:layout_height="57.5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="54.5dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            app:layout_constraintLeft_toRightOf="@id/my_data_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_data_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/c_333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:text="@string/home_v3_base_info_my_data_3"
+                android:textColor="@color/c_999999"
+                android:textSize="11sp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_data_4"
+            android:layout_width="102dp"
+            android:layout_height="57.5dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/my_data_5"
+            app:layout_constraintTop_toBottomOf="@id/my_data_1">
+
+            <TextView
+                android:id="@+id/tv_data_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/c_333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:text="@string/home_v3_base_info_my_data_4"
+                android:textColor="@color/c_999999"
+                android:textSize="11sp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_data_5"
+            android:layout_width="102dp"
+            android:layout_height="57.5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toRightOf="@id/my_data_4"
+            app:layout_constraintRight_toLeftOf="@id/my_data_6"
+            app:layout_constraintTop_toBottomOf="@id/my_data_1">
+
+            <TextView
+                android:id="@+id/tv_data_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/c_333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:text="@string/home_v3_base_info_my_data_5"
+                android:textColor="@color/c_999999"
+                android:textSize="11sp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_data_6"
+            android:layout_width="102dp"
+            android:layout_height="57.5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            app:layout_constraintLeft_toRightOf="@id/my_data_5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_data_1">
+
+            <TextView
+                android:id="@+id/tv_data_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/c_333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:text="@string/home_v3_base_info_my_data_6"
+                android:textColor="@color/c_999999"
+                android:textSize="11sp" />
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+</layout>

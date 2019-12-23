@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="selectimage_image_size">120dp</dimen>
+    <dimen name="selectimage_space_size">2dp</dimen>
+    <dimen name="selectimage_folder_cover_size">72dp</dimen>
+    <dimen name="selectimage_btten_lib_title_finish_font_size">14sp</dimen>
+</resources>

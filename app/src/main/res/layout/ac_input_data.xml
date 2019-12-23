@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.register.VMInputData" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_name_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_data_name"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/ed_name"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toTopOf="@+id/ed_name" />
+
+                <EditText
+                    android:id="@+id/ed_name"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/forgot_pwd_item_h"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:hint="请输入店铺名称"
+                    android:paddingLeft="@dimen/input_data_item_ed_pl"
+                    android:singleLine="true"
+                    android:text="@={vm.nameStr}"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textColorHint="@color/login_item_ed_hint"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toEndOf="@+id/tv_name_tips"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v_name_line"
+                    style="@style/h_line"
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="@dimen/input_data_item_plr"
+                    android:layout_marginRight="@dimen/input_data_item_plr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_name" />
+
+                <TextView
+                    android:id="@+id/tv_type_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_data_type"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/sp_type"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toTopOf="@+id/sp_type" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/sp_type"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/forgot_pwd_item_h"
+                    android:paddingLeft="@dimen/input_data_item_ed_pl"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toEndOf="@+id/tv_type_tips"
+                    app:layout_constraintTop_toBottomOf="@+id/v_name_line" />
+                <!--android:entries="@array/input_data_shop_types"-->
+                <View
+                    android:id="@+id/v_type_line"
+                    style="@style/h_line"
+                    android:layout_width="0dip"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_type" />
+
+                <TextView
+                    android:id="@+id/tv_city_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_data_city"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/sp_city"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toTopOf="@+id/sp_city" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/sp_city"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/forgot_pwd_item_h"
+                    android:entries="@array/input_data_cities"
+                    android:paddingLeft="@dimen/input_data_item_ed_pl"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toEndOf="@+id/tv_type_tips"
+                    app:layout_constraintTop_toBottomOf="@+id/v_type_line" />
+
+                <View
+                    android:id="@+id/v_city_line"
+                    style="@style/h_line"
+                    android:layout_width="0dip"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_city" />
+
+                <TextView
+                    android:id="@+id/tv_address_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_data_address"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_address"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toTopOf="@+id/tv_address" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/forgot_pwd_item_h"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/ic_arrow_right"
+                    android:gravity="center_vertical|left"
+                    android:hint="请在地图上选取店铺地址"
+                    android:paddingLeft="@dimen/input_data_item_ed_pl"
+                    android:paddingRight="@dimen/input_data_item_ed_pl"
+                    android:singleLine="true"
+                    android:text="@={vm.addressStr}"
+                    android:textColor="@color/login_item_ed_text"
+                    android:textColorHint="@color/login_item_ed_hint"
+                    android:textSize="@dimen/input_data_item_ed_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toEndOf="@+id/tv_name_tips"
+                    app:layout_constraintTop_toBottomOf="@+id/v_city_line" />
+
+
+                <View
+                    android:id="@+id/v_content_space"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/input_data_content_split_h"
+                    android:background="@color/input_data_content_split"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+                <TextView
+                    android:id="@+id/tv_shop_photo_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_data_step_title_first_mt"
+                    android:text="@string/input_data_shop_photo"
+                    android:textColor="@color/login_title_text"
+                    android:textSize="@dimen/input_data_step_title"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toBottomOf="@+id/v_content_space" />
+
+                <TextView
+                    android:id="@+id/tv_shop_photo_des"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/input_data_step_des_ml"
+                    android:layout_marginTop="@dimen/input_data_step_des_mt"
+                    android:text="@string/input_data_shop_photo_tips"
+                    android:textColor="@color/input_data_step_des"
+                    android:textSize="@dimen/input_data_step_des_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_shop_photo_title" />
+
+                <ImageView
+                    android:id="@+id/img_shop_photo"
+                    android:layout_width="@dimen/input_data_step_photo_w"
+                    android:layout_height="@dimen/input_data_step_photo_h"
+                    android:layout_marginTop="@dimen/input_data_step_photo_mt"
+                    android:background="@drawable/input_data_add_photo_bg"
+                    android:onClick="gotoSelectImage"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_add_img_big"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_des"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_shop_photo_des" />
+
+                <TextView
+                    android:id="@+id/tv_environmental_photo_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_data_step_title_mt"
+                    android:text="@string/input_data_environmental_photo"
+                    android:textColor="@color/login_title_text"
+                    android:textSize="@dimen/input_data_step_title"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/img_shop_photo" />
+
+                <TextView
+                    android:id="@+id/tv_environmental_photo_des"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/input_data_step_des_ml"
+                    android:layout_marginTop="@dimen/input_data_step_des_mt"
+                    android:text="@string/input_data_environmental_photo_tips"
+                    android:textColor="@color/input_data_step_des"
+                    android:textSize="@dimen/input_data_step_des_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_environmental_photo_title" />
+
+                <ImageView
+                    android:id="@+id/img_environmengtal_photo"
+                    android:layout_width="@dimen/input_data_step_photo_w"
+                    android:layout_height="@dimen/input_data_step_photo_h"
+                    android:layout_marginTop="@dimen/input_data_step_photo_mt"
+                    android:background="@drawable/input_data_add_photo_bg"
+                    android:onClick="gotoSelectImage"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_add_img_big"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_des"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_environmental_photo_des" />
+
+                <TextView
+                    android:id="@+id/tv_idcard_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_data_step_title_mt"
+                    android:text="@string/input_data_idcard_photo"
+                    android:textColor="@color/login_title_text"
+                    android:textSize="@dimen/input_data_step_title"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/img_environmengtal_photo" />
+
+                <TextView
+                    android:id="@+id/tv_idcard_photo_des"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/input_data_step_des_ml"
+                    android:layout_marginTop="@dimen/input_data_step_des_mt"
+                    android:text="@string/input_data_idcard_photo_tips"
+                    android:textColor="@color/input_data_step_des"
+                    android:textSize="@dimen/input_data_step_des_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_idcard_title" />
+
+                <ImageView
+                    android:id="@+id/img_idcard_photo"
+                    android:layout_width="@dimen/input_data_step_photo_w"
+                    android:layout_height="@dimen/input_data_step_photo_h"
+                    android:layout_marginTop="@dimen/input_data_step_photo_mt"
+                    android:background="@drawable/input_data_add_photo_bg"
+                    android:onClick="gotoSelectImage"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_add_img_big"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_des"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_idcard_photo_des" />
+
+                <TextView
+                    android:id="@+id/tv_license_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_data_step_title_mt"
+                    android:text="@string/input_data_business_license_photo"
+                    android:textColor="@color/login_title_text"
+                    android:textSize="@dimen/input_data_step_title"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/img_idcard_photo" />
+
+                <TextView
+                    android:id="@+id/tv_license_photo_des"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/input_data_step_des_ml"
+                    android:layout_marginTop="@dimen/input_data_step_des_mt"
+                    android:text="@string/input_data_idcard_photo_tips"
+                    android:textColor="@color/input_data_step_des"
+                    android:textSize="@dimen/input_data_step_des_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_license_title" />
+
+                <ImageView
+                    android:id="@+id/img_license_photo"
+                    android:layout_width="@dimen/input_data_step_photo_w"
+                    android:layout_height="@dimen/input_data_step_photo_h"
+                    android:layout_marginTop="@dimen/input_data_step_photo_mt"
+                    android:background="@drawable/input_data_add_photo_bg"
+                    android:onClick="gotoSelectImage"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_add_img_big"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_des"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_license_photo_des" />
+
+                <ImageButton
+                    android:id="@+id/ib_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/input_data_check_ml"
+                    android:layout_marginTop="@dimen/input_data_check_mt"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="@dimen/input_data_check_p"
+                    android:src="@drawable/pay_way_check"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shop_photo_title"
+                    app:layout_constraintTop_toBottomOf="@+id/img_license_photo" />
+
+                <TextView
+                    android:id="@+id/tv_protocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/input_data_merchant_settlement_agreement"
+                    android:textColor="@color/login_forgot_pwd_text"
+                    android:textSize="@dimen/input_data_protocol_text"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/ib_check"
+                    app:layout_constraintStart_toEndOf="@+id/ib_check"
+                    app:layout_constraintTop_toTopOf="@+id/ib_check" />
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/login_btn_h"
+                    android:layout_marginTop="@dimen/input_data_btn_mt"
+                    android:background="@drawable/login_btn"
+                    android:gravity="center"
+                    android:text="@string/input_data_btn_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_btn_text"
+                    app:layout_constraintEnd_toEndOf="@+id/v_name_line"
+                    app:layout_constraintStart_toStartOf="@+id/v_name_line"
+                    app:layout_constraintTop_toBottomOf="@+id/ib_check" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_data_bottom_space"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_confirm" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+</layout>

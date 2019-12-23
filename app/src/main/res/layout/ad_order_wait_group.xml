@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.OrderBean"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="3dip">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_avartar"
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="10dip"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dip"
+                android:drawableRight="@mipmap/ic_arrow_right"
+                android:drawablePadding="10dip"
+                android:text="@{item.NICKNAME}"
+                android:textColor="#1D1D1D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_avartar"
+                app:layout_constraintStart_toEndOf="@+id/img_avartar"
+                app:layout_constraintTop_toTopOf="@+id/img_avartar"
+                tools:text="蜜雪儿"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dip"
+                android:text="待成团"
+                android:textColor="#1D1D1D"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_nickname"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="51dip"
+                android:layout_height="48dip"
+                android:layout_marginTop="14dip"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="@+id/img_avartar"
+                app:layout_constraintTop_toBottomOf="@+id/img_avartar"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{item.NAME}"
+                android:textColor="@color/text_light_black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_status"
+                app:layout_constraintStart_toEndOf="@+id/img"
+                app:layout_constraintTop_toTopOf="@+id/img"
+                tools:text="途虎洗车10次权益包"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:text="@{String.format(@string/order_rights_protection_order_time,item.ORDERTIME)}"
+                android:textColor="@color/text_light_black"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:text="下单时间：2018-12-12 12:12"/>
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:text="@{String.format(@string/order_rights_protection_order_num,item.ORDER_ID)}"
+                android:textColor="@color/text_light_black"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_time"
+                tools:text="订单编号：123456789"/>
+
+            <View
+                android:id="@+id/v_info_line"
+                android:layout_width="0dip"
+                android:layout_height="1dip"
+                android:layout_marginTop="14dip"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img"
+                />
+
+            <Button
+                android:id="@+id/btn_help"
+                android:layout_width="63dip"
+                android:layout_height="28dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/order_wait_group_option"
+                android:gravity="center"
+                android:text="助他成团"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_status"
+                app:layout_constraintTop_toBottomOf="@+id/v_info_line"/>
+
+            <View
+                android:id="@+id/v_space"
+                android:layout_width="0dip"
+                android:layout_height="11dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_help"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</layout>

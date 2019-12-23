@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.merchant.team.vm.VMMyTeam"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:textColor="@color/colorPrimary"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:text="3600.00"/>
+
+        <TextView
+            android:id="@+id/tv_income_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:text="累计获取奖励（元）"
+            android:textColor="#777777"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_income"/>
+
+        <TextView
+            android:id="@+id/tv_tab_one"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_marginTop="20dip"
+            android:drawableBottom="@drawable/my_team_tab"
+            android:gravity="center"
+            android:text="一级"
+            android:textColor="@color/color_my_team_tab"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_tab_two"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_income_tips"
+            />
+
+        <TextView
+            android:id="@+id/tv_tab_two"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_marginTop="20dip"
+            android:drawableBottom="@drawable/my_team_tab"
+            android:gravity="center"
+            android:text="二级"
+            android:textColor="@color/color_my_team_tab"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_tab_one"
+            app:layout_constraintTop_toBottomOf="@+id/tv_income_tips"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tab_one">
+
+        </android.support.v4.view.ViewPager>
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.RevenueRecordBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="56dip"
+        android:minHeight="56dip">
+
+        <TextView
+            android:id="@+id/tv_record_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_marginTop="13dip"
+            android:text="@{item.DESCRIPTION}"
+            android:textColor="@color/text_dark_black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="售出月卡"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="@{item.CREATETIME}"
+            android:textColor="@color/text_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_record_des"
+            app:layout_constraintTop_toBottomOf="@+id/tv_record_des"
+            tools:text="2018-03-10 12:13"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dip"
+            android:text="@{String.format(@string/commodity_using_interest_price,item.AMOUNT)}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="￥19.00"/>
+
+        <View
+            android:id="@+id/v_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

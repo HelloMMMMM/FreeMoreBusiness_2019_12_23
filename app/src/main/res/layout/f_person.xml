@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.home.vm.VMPerson"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="44dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TitleTextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"/>
+
+                <ImageButton
+                    android:id="@+id/ib_scan"
+                    android:layout_width="44dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@mipmap/ic_scan"/>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:id="@+id/v_head_top_space"
+            android:layout_width="0dip"
+            android:layout_height="6dip"
+            android:background="#F7F7F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+        <View
+            android:id="@+id/v_head_content"
+            android:layout_width="0dip"
+            android:layout_height="76dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_head_top_space"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="15dip"
+            app:layout_constraintBottom_toBottomOf="@+id/v_head_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/v_head_content"/>
+
+        <ImageView
+            android:id="@+id/img_qrcode"
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:layout_marginRight="15dip"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_qrcode"
+            app:layout_constraintBottom_toBottomOf="@+id/v_head_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/v_head_content"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="3dip"
+            android:ellipsize="end"
+            android:paddingRight="8dip"
+            android:singleLine="true"
+            android:text="惊呼洗车行-中南路店"
+            android:textColor="@color/text_dark_black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/img_qrcode"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img"
+            tools:text="惊呼洗车行-中南路店"/>
+
+        <TextView
+            android:id="@+id/tv_addr"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:ellipsize="marquee"
+            android:paddingRight="8dip"
+            android:singleLine="true"
+            android:text="武汉市武昌区楚河汉街1818"
+            android:textColor="#B4666666"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            tools:text="武汉市武昌区楚河汉街1818"/>
+
+        <View
+            android:id="@+id/v_head_bottom_space"
+            android:layout_width="0dip"
+            android:layout_height="6dip"
+            android:background="#F7F7F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_head_content"/>
+
+        <TextView
+            android:id="@+id/tv_add_account"
+            android:layout_width="0dip"
+            android:layout_height="51dip"
+            android:drawableLeft="@mipmap/ic_merchant_account"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:drawablePadding="6dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="子账号管理"
+            android:textColor="#202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_head_bottom_space"/>
+
+        <View
+            android:id="@+id/v_account_line"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/line"
+            android:layout_marginLeft="36dip"
+            android:background="#F4F4F4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add_account"/>
+
+
+        <TextView
+            android:id="@+id/tv_review"
+            android:layout_width="0dip"
+            android:layout_height="51dip"
+            android:drawableLeft="@mipmap/ic_merchant_review"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:drawablePadding="6dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="运营审核"
+            android:textColor="#202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_account_line"/>
+
+        <View
+            android:id="@+id/v_permission_space"
+            android:layout_width="0dip"
+            android:layout_height="6dip"
+            android:background="#F7F7F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_review"/>
+
+        <TextView
+            android:id="@+id/tv_member"
+            android:layout_width="0dip"
+            android:layout_height="51dip"
+            android:drawableLeft="@mipmap/ic_mine_member"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:drawablePadding="6dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="我的团队"
+            android:textColor="#202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_permission_space"/>
+
+        <View
+            android:id="@+id/v_member_line"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/line"
+            android:layout_marginLeft="36dip"
+            android:background="#F4F4F4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_member"/>
+
+
+        <TextView
+            android:id="@+id/tv_alliance"
+            android:layout_width="0dip"
+            android:layout_height="51dip"
+            android:drawableLeft="@mipmap/ic_mine_alliance"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:drawablePadding="6dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="我的联盟"
+            android:textColor="#202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_member_line"/>
+
+        <View
+            android:id="@+id/v_func_space"
+            android:layout_width="0dip"
+            android:layout_height="6dip"
+            android:background="#F7F7F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_alliance"/>
+
+        <TextView
+            android:id="@+id/tv_my_margin"
+            android:layout_width="0dip"
+            android:layout_height="51dip"
+            android:drawableLeft="@mipmap/ic_person_margin"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:drawablePadding="6dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="我的保证金"
+            android:textColor="#202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_func_space"/>
+
+        <View
+            android:id="@+id/v_margin_space"
+            android:layout_width="0dip"
+            android:layout_height="6dip"
+            android:background="#F7F7F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_my_margin"/>
+
+        <TextView
+            android:id="@+id/tv_my_set"
+            android:layout_width="0dip"
+            android:layout_height="51dip"
+            android:drawableLeft="@mipmap/ic_person_set"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:drawablePadding="6dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="我的设置"
+            android:textColor="#202020"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_margin_space"/>
+
+        <View
+            android:id="@+id/v_set_line"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/line"
+            android:layout_marginLeft="36dip"
+            android:background="#F4F4F4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_my_set"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

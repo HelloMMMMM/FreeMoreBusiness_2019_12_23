@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.finance.vm.VMWithdraw"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/v_content"
+            android:layout_width="0dip"
+            android:layout_height="200dip"
+            android:layout_marginLeft="18dip"
+            android:layout_marginTop="27dip"
+            android:layout_marginRight="18dip"
+            android:background="#F8F8F8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+        <TextView
+            android:id="@+id/tv_target_card_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_marginTop="20dip"
+            android:text="到账银行卡"
+            android:textColor="@color/text_dark_black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/v_content"
+            app:layout_constraintTop_toTopOf="@+id/v_content"/>
+
+        <TextView
+            android:id="@+id/tv_target_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:textColor="#2864A7"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_target_card_tips"
+            app:layout_constraintStart_toEndOf="@+id/tv_target_card_tips"
+            tools:text="广发银行(0475)"/>
+
+        <View
+            android:id="@+id/v_input_split"
+            android:layout_width="@dimen/line"
+            android:layout_height="32dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="54dip"
+            android:background="#66999999"
+            app:layout_constraintStart_toEndOf="@+id/tv_unit"
+            app:layout_constraintTop_toBottomOf="@+id/tv_target_card_tips"/>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@+id/v_input_split"
+            app:layout_constraintStart_toStartOf="@+id/tv_target_card_tips"
+            app:layout_constraintTop_toTopOf="@+id/v_input_split"/>
+
+        <EditText
+            android:id="@+id/ed_money"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:background="@null"
+            android:hint="输入您要提现的金额"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:textColor="@color/text_dark_black"
+            android:textColorHint="#80030303"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_unit"
+            app:layout_constraintEnd_toEndOf="@+id/v_content"
+            app:layout_constraintStart_toEndOf="@+id/v_input_split"
+            app:layout_constraintTop_toTopOf="@+id/tv_unit"/>
+
+        <View
+            android:id="@+id/v_input_line"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/line"
+            android:layout_marginTop="4dip"
+            android:background="#EDECEC"
+            app:layout_constraintEnd_toEndOf="@+id/ed_money"
+            app:layout_constraintStart_toStartOf="@+id/tv_unit"
+            app:layout_constraintTop_toBottomOf="@+id/v_input_split"/>
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:textColor="#676767"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/v_input_line"
+            app:layout_constraintTop_toBottomOf="@+id/v_input_line"
+            tools:text="账户余额 3000.00元"/>
+
+        <TextView
+            android:id="@+id/tv_withdraw_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:padding="3dip"
+            android:text="全部提现"
+            android:textColor="#2864A7"
+            android:textSize="11sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_balance"
+            app:layout_constraintStart_toEndOf="@+id/tv_balance"/>
+
+        <TextView
+            android:id="@+id/tv_withdraw_des"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dip"
+            android:drawableLeft="@mipmap/ic_withdraw_warn"
+            android:drawablePadding="6dip"
+            android:textColor="@color/text_light_black"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/v_content"
+            app:layout_constraintEnd_toEndOf="@+id/ed_money"
+            app:layout_constraintStart_toStartOf="@+id/tv_balance"
+            app:layout_constraintTop_toBottomOf="@+id/tv_balance"
+            tools:text="额外扣除￥30.00手续费"/>
+
+        <Button
+            android:id="@+id/btn_withdraw"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_btn_h"
+            android:layout_marginTop="38dip"
+            android:background="@drawable/login_btn"
+            android:gravity="center"
+            android:text="提现"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/v_content"
+            app:layout_constraintStart_toStartOf="@+id/v_content"
+            app:layout_constraintTop_toBottomOf="@+id/v_content"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

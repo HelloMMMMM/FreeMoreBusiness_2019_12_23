@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.WithdrawRecordBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="115dip"
+        android:background="@android:color/white"
+        android:minHeight="115dip">
+
+        <ImageView
+            android:id="@+id/img_bank"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_marginLeft="9dip"
+            android:layout_marginTop="26dip"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dip"
+            android:layout_marginRight="8dip"
+            android:text="@{String.format(@string/commodity_using_interest_price,item.amount)}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="￥888.00"
+            />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="13dip"
+            android:text="@{item.bankname}"
+            android:textColor="@color/text_light_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/img_bank"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="工商银行"/>
+
+        <TextView
+            android:id="@+id/tv_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dip"
+            android:textColor="@color/text_light_gray"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_bank_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bank_name"
+            tools:text="**** **** **** 9703"/>
+
+        <View
+            android:id="@+id/v_card_info_line"
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:layout_marginTop="17dip"
+            android:background="#F6F3F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_bank_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bank_card"
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(@string/finance_withdraw_time,item.createtime)}"
+            android:textColor="@color/text_light_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_money"
+            app:layout_constraintTop_toBottomOf="@+id/v_card_info_line"
+            tools:text="提现时间：2019-01-01 12:12"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

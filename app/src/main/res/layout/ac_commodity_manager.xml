@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.commodity.vm.VMCommodityManager"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/home_tabs_h"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:tl_indicator_anim_enable="true"
+            app:tl_indicator_bounce_enable="true"
+            app:tl_indicator_color="@color/login_tab_text_select"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/login_tab_text_select"
+            app:tl_textUnselectColor="@color/home_tab_item_unselect"
+            app:tl_textsize="@dimen/home_tabs_textsize"
+            app:tl_underline_color="@color/home_tab_underline"
+            app:tl_underline_height="@dimen/login_tab_bottom_line_h"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:background="#F7F7F7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs"></android.support.v4.view.ViewPager>
+    </android.support.constraint.ConstraintLayout>
+</layout>

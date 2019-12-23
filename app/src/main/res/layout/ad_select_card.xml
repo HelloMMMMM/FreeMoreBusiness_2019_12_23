@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:drawableRight="@drawable/pay_way_check"
+    android:gravity="center_vertical"
+    android:minHeight="48dip"
+    android:paddingLeft="32dip"
+    android:paddingRight="15dip"
+    android:textColor="@color/text_dark_black"
+    android:textSize="13sp"
+    tools:text="广发银行(0475)">
+
+</TextView>

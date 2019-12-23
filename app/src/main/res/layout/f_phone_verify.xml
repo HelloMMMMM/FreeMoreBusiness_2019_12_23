@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.login.vm.VMPhoneVerify"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_item_h"
+            android:layout_marginLeft="@dimen/login_item_mlr"
+            android:layout_marginTop="@dimen/login_item_mt"
+            android:background="@null"
+            android:drawableLeft="@mipmap/ic_login_phone"
+            android:drawablePadding="@dimen/login_item_ed_dp"
+            android:gravity="center_vertical|left"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textColor="@color/login_item_ed_text"
+            android:textColorHint="@color/login_item_ed_hint"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintEnd_toStartOf="@+id/tv_get_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/login_item_mlr"
+            android:padding="@dimen/login_get_code_p"
+            android:text="@string/login_get_code_text"
+            android:textColor="@color/login_forgot_pwd_text"
+            android:textSize="@dimen/login_get_code_text"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ed_phone"/>
+
+        <View
+            android:id="@+id/v_account_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            app:layout_constraintEnd_toEndOf="@+id/tv_get_code"
+            app:layout_constraintStart_toStartOf="@+id/ed_phone"
+            app:layout_constraintTop_toBottomOf="@+id/ed_phone"/>
+
+        <EditText
+            android:id="@+id/ed_code"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_item_h"
+            android:background="@null"
+            android:drawableLeft="@mipmap/ic_login_code"
+            android:drawablePadding="@dimen/login_item_ed_dp"
+            android:gravity="center_vertical|left"
+            android:hint="请输入短信验证码"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:textColor="@color/login_item_ed_text"
+            android:textColorHint="@color/login_item_ed_hint"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintEnd_toEndOf="@+id/tv_get_code"
+            app:layout_constraintStart_toStartOf="@+id/ed_phone"
+            app:layout_constraintTop_toBottomOf="@+id/v_account_line"/>
+
+        <View
+            android:id="@+id/v_password_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            app:layout_constraintEnd_toEndOf="@+id/tv_get_code"
+            app:layout_constraintStart_toStartOf="@+id/ed_phone"
+            app:layout_constraintTop_toBottomOf="@+id/ed_code"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_btn_h"
+            android:layout_marginTop="@dimen/login_btn_mt"
+            android:background="@drawable/login_btn"
+            android:gravity="center"
+            android:text="@string/login_btn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_btn_text"
+            app:layout_constraintEnd_toEndOf="@+id/tv_get_code"
+            app:layout_constraintStart_toStartOf="@+id/ed_phone"
+            app:layout_constraintTop_toBottomOf="@+id/v_password_line"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

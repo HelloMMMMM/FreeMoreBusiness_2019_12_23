@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9F9F9">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_layout_toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_security"
+        android:layout_width="0dip"
+        android:layout_height="45dip"
+        android:background="@android:color/white"
+        android:drawableRight="@mipmap/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="账户与安全"
+        android:textColor="#202020"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="0dip"
+        android:layout_height="45dip"
+        android:layout_marginTop="6dip"
+        android:background="@android:color/white"
+        android:drawableRight="@mipmap/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="关于免好多"
+        android:textColor="#202020"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_security"/>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="0dip"
+        android:layout_height="39dip"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="126dip"
+        android:layout_marginRight="50dip"
+        android:background="@drawable/login_btn"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about"/>
+</android.support.constraint.ConstraintLayout>

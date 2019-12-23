@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.home.vm.VMHome"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/v_head"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/home_head_h"
+            android:background="@color/home_head_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/img_head"
+            android:layout_width="@dimen/home_head_avatar_size"
+            android:layout_height="@dimen/home_head_avatar_size"
+            android:layout_marginLeft="@dimen/home_head_avatar_ml"
+            android:layout_marginBottom="@dimen/home_head_avatar_mb"
+            app:layout_constraintBottom_toBottomOf="@+id/v_head"
+            app:layout_constraintStart_toStartOf="@+id/v_head"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/home_head_name_ml"
+            android:layout_marginTop="@dimen/home_head_name_mt"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/home_head_name_text"
+            app:layout_constraintStart_toEndOf="@+id/img_head"
+            app:layout_constraintTop_toTopOf="@+id/img_head"
+            tools:text="惊呼洗车行-中南路店"/>
+
+        <TextView
+            android:id="@+id/tv_addr"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/home_head_addr_mb"
+            android:singleLine="true"
+            android:textColor="@color/home_head_addr"
+            android:textSize="@dimen/home_head_addr_text"
+            app:layout_constraintBottom_toBottomOf="@+id/img_head"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            tools:text="武汉市武昌区楚河汉街1818"/>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/home_tabs_h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_head"
+            app:tl_indicator_anim_enable="true"
+            app:tl_indicator_bounce_enable="true"
+            app:tl_indicator_color="@color/login_tab_text_select"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/login_tab_text_select"
+            app:tl_textUnselectColor="@color/home_tab_item_unselect"
+            app:tl_textsize="@dimen/home_tabs_textsize"
+            app:tl_underline_color="@color/home_tab_underline"
+            app:tl_underline_height="@dimen/login_tab_bottom_line_h"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs">
+
+        </android.support.v4.view.ViewPager>
+    </android.support.constraint.ConstraintLayout>
+</layout>

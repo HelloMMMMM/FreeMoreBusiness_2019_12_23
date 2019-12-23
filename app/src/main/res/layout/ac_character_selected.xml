@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.character.VMCharacter"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_character_bg">
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/character_app_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/character_selected_app_name_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.16"/>
+
+        <Button
+            android:id="@+id/btn_business"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/character_selected_btn_h"
+            android:layout_marginLeft="@dimen/character_selected_btn_mlr"
+            android:layout_marginRight="@dimen/character_selected_btn_mlr"
+            android:background="@drawable/character_selected_business"
+            android:text="@string/character_business"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/character_selected_btn_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3511"/>
+
+        <Button
+            android:id="@+id/btn_proxy"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/character_selected_btn_h"
+            android:layout_marginLeft="@dimen/character_selected_btn_mlr"
+            android:layout_marginTop="@dimen/character_selected_btn_mt"
+            android:layout_marginRight="@dimen/character_selected_btn_mlr"
+            android:background="@drawable/character_selected_proxy"
+            android:text="@string/character_proxy"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/character_selected_btn_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_business"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

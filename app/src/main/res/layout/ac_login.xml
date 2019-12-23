@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.login.vm.VMLogin"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/img_decorate"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_decorate_h"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_login_bg_decorate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_register_mt"
+            android:layout_marginRight="@dimen/login_register_mr"
+            android:text="@string/login_register"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_title_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/login_title_size"
+            android:layout_height="@dimen/login_title_size"
+            android:background="@mipmap/ic_login_title_bg"
+            android:gravity="center"
+            android:text="@string/login_title"
+            android:textColor="@color/login_title_text"
+            android:textSize="@dimen/login_title_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1477"/>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_tab_h"
+            android:layout_marginLeft="@dimen/login_tab_mlr"
+            android:layout_marginTop="@dimen/login_tab_mt"
+            android:layout_marginRight="@dimen/login_tab_mlr"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:tl_indicator_anim_enable="true"
+            app:tl_indicator_bounce_enable="true"
+            app:tl_indicator_color="@color/login_tab_text_select"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/login_tab_text_select"
+            app:tl_textUnselectColor="@color/login_tab_text_unselect"
+            app:tl_textsize="@dimen/login_tab_textsize"
+            app:tl_underline_color="@color/login_tab_underline"
+            app:tl_underline_height="@dimen/login_tab_bottom_line_h"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs"></android.support.v4.view.ViewPager>
+    </android.support.constraint.ConstraintLayout>
+</layout>

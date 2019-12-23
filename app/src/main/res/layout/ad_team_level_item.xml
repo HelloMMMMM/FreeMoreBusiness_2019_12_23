@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.IncomeBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="63dip"
+        android:minHeight="63dip">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="39dip"
+            android:layout_height="39dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="11dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dip"
+            android:layout_marginRight="15dip"
+            android:text="@{String.format(@string/team_level_item_reward,item.REWARD)}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+20.00"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="2dip"
+            android:text="@{String.format(@string/team_level_item_des,item.TO_NICKNAME,item.NAME)}"
+            android:textColor="@color/text_light_black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_income"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img"
+            tools:text="***购买了黄金月卡"
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(@string/team_level_item_time,item.CREATETIME)}"
+            android:textColor="#777777"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img"
+            app:layout_constraintEnd_toEndOf="@+id/tv_des"
+            app:layout_constraintStart_toStartOf="@+id/tv_des"
+            tools:text="购买时间：2019-12-12 12:12"
+            />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:background="#F3F3F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_income"
+            app:layout_constraintStart_toStartOf="@+id/img"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

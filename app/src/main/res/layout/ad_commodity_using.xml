@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.InterestBean"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="3dip">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="69dip"
+                android:layout_height="67dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="12dip"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9dip"
+                android:text="@{item.TYPE==1?@string/commodity_using_interest_type_normal:@string/commodity_using_interest_type_group}"
+                android:textColor="#1D1D1D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_name"
+                tools:text="拼团权益包"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="6dip"
+                android:text="@{item.NAME}"
+                android:textColor="@color/text_light_black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_type"
+                app:layout_constraintStart_toEndOf="@+id/img"
+                app:layout_constraintTop_toTopOf="@+id/img"
+                tools:text="途虎洗车十次"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:text="@{String.format(@string/commodity_using_interest_publish_time,item.STARTTIME)}"
+                android:textColor="@color/text_light_black"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:text="发布时间：2018-12-12 15:30"/>
+
+            <TextView
+                android:id="@+id/tv_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:text="@{String.format(@string/commodity_using_interest_sale,item.SELLNUM,item.QUANTITY)}"
+                android:textColor="@color/text_light_black"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_time"
+                tools:text="已拼100件  剩余1001件"/>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:text="@{String.format(@string/commodity_using_interest_price,item.PRICE)}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sale"
+                tools:text="￥19.00"/>
+
+            <View
+                android:id="@+id/v_info_line"
+                android:layout_width="0dip"
+                android:layout_height="1dip"
+                android:layout_marginTop="14dip"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img"/>
+
+            <Button
+                android:id="@+id/btn_removed"
+                android:layout_width="59dip"
+                android:layout_height="24dip"
+                android:layout_marginTop="12dip"
+                android:layout_marginRight="12dip"
+                android:background="@drawable/order_rights_protection_option"
+                android:gravity="center"
+                android:text="下架"
+                android:textColor="#777777"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_info_line"/>
+
+            <View
+                android:id="@+id/v_bottom_space"
+                android:layout_width="0dip"
+                android:layout_height="12dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_removed"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</layout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.order.vm.VMOrderComplete"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_status"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/reservation_reject_status_plr"
+                    android:paddingTop="@dimen/reservation_reject_status_ptb"
+                    android:paddingRight="@dimen/reservation_reject_status_plr"
+                    android:paddingBottom="@dimen/reservation_reject_status_ptb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/ic_reservation_pass"
+                        android:drawablePadding="@dimen/reservation_reject_status_dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/reservation_detail_status_pass"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/reservation_reject_status_text"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_status_space"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/reservation_detail_content_mt"
+                    android:background="@color/gray_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_status"/>
+
+
+                <ImageView
+                    android:id="@+id/img_commodity"
+                    android:layout_width="@dimen/reservation_detail_content_img_w"
+                    android:layout_height="@dimen/reservation_detail_content_img_h"
+                    android:layout_marginLeft="@dimen/reservation_detail_content_avartar_mt"
+                    android:layout_marginTop="@dimen/reservation_detail_content_avartar_mt"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_status_space"/>
+
+                <TextView
+                    android:id="@+id/tv_commodity_name"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/reservation_detail_content_commodity_name_ml"
+                    android:layout_marginRight="@dimen/reservation_detail_content_avartar_mt"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="@dimen/reservation_detail_content_commodity_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_commodity"
+                    app:layout_constraintTop_toTopOf="@+id/img_commodity"
+                    tools:text="途虎洗车10次"/>
+
+                <TextView
+                    android:id="@+id/tv_commodity_intro"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/reservation_detail_content_commodity_intro_mt"
+                    android:text="@string/reservation_detail_commodity_des"
+                    android:textColor="@color/reservation_detail_commodity_des_text"
+                    android:textSize="@dimen/reservation_detail_content_commodity_intro"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_commodity_name"
+                    app:layout_constraintStart_toStartOf="@+id/tv_commodity_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_commodity_name"/>
+
+                <TextView
+                    android:id="@+id/tv_commodity_price"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/reservation_detail_content_commodity_price_mt"
+                    android:text="￥19"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/reservation_detail_content_commodity_price"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_commodity_name"
+                    app:layout_constraintStart_toStartOf="@+id/tv_commodity_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_commodity_intro"/>
+
+                <View
+                    android:id="@+id/v_content_line"
+                    style="@style/h_line"
+                    android:layout_width="0dip"
+                    android:layout_marginTop="@dimen/order_complete_info_line_mt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_commodity"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_info"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/reservation_detail_info_plr"
+                    android:paddingTop="@dimen/reservation_detail_info_pt"
+                    android:paddingRight="@dimen/reservation_detail_info_plr"
+                    android:paddingBottom="@dimen/reservation_detail_info_pb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_content_line">
+
+                    <TextView
+                        android:id="@+id/tv_project"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reservation_detail_info_project"
+                        android:textColor="@color/text_light_black"
+                        android:textSize="@dimen/reservation_detail_info_project_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/reservation_detail_info_project_mt"
+                        android:text="@string/reservation_detail_info_time"
+                        android:textColor="@color/text_light_black"
+                        android:textSize="@dimen/reservation_detail_info_project_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_use_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/reservation_detail_info_project_mt"
+                        android:text="@string/reservation_detail_info_time"
+                        android:textColor="@color/text_light_black"
+                        android:textSize="@dimen/reservation_detail_info_project_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/reservation_detail_info_project_mt"
+                        android:text="@string/reservation_detail_info_order_num"
+                        android:textColor="@color/text_light_black"
+                        android:textSize="@dimen/reservation_detail_info_project_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_remark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/reservation_detail_info_project_mt"
+                        android:text="@string/reservation_detail_info_remark"
+                        android:textColor="@color/text_light_black"
+                        android:textSize="@dimen/reservation_detail_info_project_text"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_info_space"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/reservation_detail_content_mt"
+                    android:background="@color/gray_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_info"/>
+
+                <TextView
+                    android:id="@+id/tv_comment_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/order_complete_comment_mt"
+                    android:text="@string/order_complete_comment_tips"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="@dimen/order_complete_comment_content_text"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/img_commodity"
+                    app:layout_constraintTop_toBottomOf="@+id/v_info_space"/>
+
+                <ImageView
+                    android:id="@+id/img_avartar"
+                    android:layout_width="@dimen/order_complete_avartar_size"
+                    android:layout_height="@dimen/order_complete_avartar_size"
+                    android:layout_marginTop="@dimen/order_complete_name_mt"
+                    app:layout_constraintStart_toStartOf="@+id/tv_comment_tips"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_comment_tips"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/order_complete_name_ml"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="@dimen/order_complete_name_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_avartar"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_commodity_name"
+                    app:layout_constraintStart_toEndOf="@+id/img_avartar"
+                    app:layout_constraintTop_toTopOf="@+id/img_avartar"/>
+
+                <TextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/order_complete_des_mt"
+                    android:textColor="@color/order_complete_comment_name_text"
+                    android:textSize="@dimen/order_complete_des_text"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintStart_toStartOf="@+id/img_avartar"
+                    app:layout_constraintTop_toBottomOf="@+id/img_avartar"
+                    tools:text="2018-12-12 15:00 在惊呼车行使用了途虎洗车10次权益包"/>
+
+                <TextView
+                    android:id="@+id/tv_comment_content"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/order_complete_comment_content_mt"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="@color/text_light_black"
+                    android:textSize="@dimen/order_complete_comment_content_text"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_des"
+                    app:layout_constraintStart_toStartOf="@+id/tv_des"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_des"
+                    tools:text="这家店的服务非常好，一定要给出5星评价才行! 以后会经常来光顾。"
+                    />
+
+                <Button
+                    android:id="@+id/btn_answer"
+                    android:layout_width="@dimen/order_complete_comment_answer_w"
+                    android:layout_height="@dimen/order_complete_comment_answer_h"
+                    android:layout_marginTop="@dimen/order_complete_comment_answer_mt"
+                    android:background="@drawable/order_complete_answer"
+                    android:gravity="center"
+                    android:text="@string/order_complete_comment_answer_tips"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/order_complete_comment_answer_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_comment_content"/>
+
+                <View
+                    android:id="@+id/v_answer_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/order_complete_comment_answer_bottom_space"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_answer"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+</layout>

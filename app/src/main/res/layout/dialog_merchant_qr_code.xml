@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    >
+
+    <ImageView
+        android:id="@+id/img_qrcode"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_marginLeft="21dip"
+        android:layout_marginTop="21dip"
+        android:layout_marginRight="21dip"
+        android:scaleType="centerInside"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="55dip"
+        android:gravity="center"
+        android:text="长按可保存到手机相册"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_qrcode"/>
+
+    <View
+        android:id="@+id/v_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tips"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:text="分享给好友"
+        android:textColor="#2e2e2e"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/v_bottom"
+        app:layout_constraintStart_toStartOf="@+id/v_bottom"
+        app:layout_constraintTop_toTopOf="@+id/v_bottom"/>
+
+    <View
+        android:layout_width="75dip"
+        android:layout_height="0.5dip"
+        android:layout_marginRight="21dip"
+        android:background="#282828"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        />
+
+    <View
+        android:layout_width="75dip"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="21dip"
+        android:background="#282828"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/v_bottom"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/img_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_share_qq"/>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/img_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_share_weibo"/>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/img_cycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_share_cicle"/>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/img_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_share_wechat"/>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

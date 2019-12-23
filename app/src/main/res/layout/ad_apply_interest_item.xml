@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.InterestBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="96dip"
+        android:minHeight="96dip">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="87dip"
+            android:layout_height="71dip"
+            android:layout_marginLeft="15dip"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="2dip"
+            android:layout_marginRight="15dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="途虎汽车保养三次，低至899元"
+            android:textColor="@color/text_dark_black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img"
+            tools:text="途虎汽车保养三次，低至899元"/>
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="商品类别 汽车养护"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="申请时间：2018-12-06 14:00"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_type"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"/>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:layout_marginLeft="15dip"
+            android:background="#F5F5F5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

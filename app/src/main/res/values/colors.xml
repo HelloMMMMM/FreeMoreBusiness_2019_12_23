@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DD4848</color>
+    <color name="colorPrimaryDark">#DD0101</color>
+    <color name="colorAccent">#DD4848</color>
+
+    <color name="line">#DDDDDD</color>
+
+    <color name="text_dark_black">#030303</color>
+    <color name="text_light_black">#333333</color>
+    <color name="text_gray">#666666</color>
+    <color name="text_light_gray">#999999</color>
+    <color name="gray_bg">#F7F6F6</color>
+
+    <color name="character_selected_business_solid">#030736</color>
+    <color name="character_selected_proxy_solid">#4C000000</color>
+
+    <color name="login_title_text">#030305</color>
+    <color name="login_tab_text_select">@color/colorPrimary</color>
+    <color name="login_tab_text_unselect">#000000</color>
+    <color name="login_tab_underline">#E4E4E4</color>
+    <color name="login_item_ed_hint">#BEBEBE</color>
+    <color name="login_item_ed_text">#030303</color>
+    <color name="login_btn_unable">#BEBEBE</color>
+    <color name="login_forgot_pwd_text">#333333</color>
+
+    <color name="input_data_content_split">#F7F7F7</color>
+    <color name="input_data_step_des">#9A030305</color>
+    <color name="input_data_add_photo_bg">#ECEBEB</color>
+
+    <color name="main_bottom_item_text">#7C7C7C</color>
+    <color name="main_bottom_item_text_sel">@color/colorPrimary</color>
+
+    <color name="home_head_addr">#B3FFFFFF</color>
+    <color name="home_head_bg">#EA605A</color>
+    <color name="home_tab_item_unselect">#1D1D1D</color>
+    <color name="home_tab_underline">#F7F7F7</color>
+
+    <color name="home_commodity_add_bg">#51DD4848</color>
+
+    <color name="order_item_name_text">#333333</color>
+    <color name="order_item_btn_stroke">#B3B2B2</color>
+    <color name="order_item_btn_text">#030303</color>
+
+    <color name="apply_record_bg">#F6F5F5</color>
+    <color name="apply_record_item_head_bg">#ECEBEB</color>
+    <color name="apply_record_item_name_text">#030303</color>
+    <color name="apply_record_item_process_uncomplete_line">#E7E7E7</color>
+    <color name="apply_record_item_process_uncomplete_text">#80333333</color>
+
+    <color name="pay_deposit_uncheck_stroke">#DCDCDC</color>
+    <color name="pay_deposit_des_text">#525252</color>
+
+    <color name="reservation_reject_reason_type_stroke">#E7E6E6</color>
+    <color name="reservation_reject_reason_type_text">#80030303</color>
+
+    <color name="pop_line">#F1F0F0</color>
+
+    <color name="reservation_detail_commodity_des_text">#80333333</color>
+
+    <color name="order_complete_comment_name_text">#B7B7B7</color>
+
+    <color name="interest_tabs_bg">#EC736E</color>
+    <color name="interest_tabs_text_unsel">#80FFFFFF</color>
+    <color name="interest_my_item_send_time_text">#B8333333</color>
+    <color name="interest_my_item_sale_text">#949494</color>
+    <color name="interest_my_item_price_text">#E05B5B</color>
+
+    <color name="interest_detail_name_text">#424242</color>
+    <color name="interest_detail_interest_des_text">#B8424242</color>
+    <color name="interest_detail_price_text">#EC736F</color>
+    <color name="interest_detail_sale_record_text">#A5A5A5</color>
+    <color name="interest_detail_use_time_value">#1D1D1D</color>
+
+    <color name="publish_interest_photo_tips">#1D1D1D</color>
+    <color name="publish_interest_photo_add_tips">#999999</color>
+
+    <!--v3新增-->
+    <color name="c_DC3232">#DC3232</color>
+    <color name="c_FDC5C5">#FDC5C5</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_E01212">#E01212</color>
+    <color name="c_F24747">#F24747</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_FF0000">#FF0000</color>
+    <color name="c_F67777">#F67777</color>
+    <color name="c_555555">#555555</color>
+    <color name="c_1A7BB2">#1A7BB2</color>
+    <color name="c_D52962">#D52962</color>
+    <color name="c_C26C0F">#C26C0F</color>
+    <color name="c_BD6F33">#BD6F33</color>
+    <color name="c_15ABBB">#15ABBB</color>
+    <color name="c_7B60C6">#7B60C6</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_F5F5F5">#F5F5F5</color>
+    <color name="c_000000">#000000</color>
+    <color name="c_F72424">#F72424</color>
+    <color name="c_CCCCCC">#CCCCCC</color>
+    <color name="c_0A0A0A">#0A0A0A</color>
+    <color name="c_414141">#414141</color>
+    <color name="c_888888">#888888</color>
+    <color name="c_1D1D1D">#1D1D1D</color>
+    <color name="c_E0E0E0">#E0E0E0</color>
+    <color name="c_777777">#777777</color>
+    <color name="c_e9e9e9">#E9E9E9</color>
+    <color name="c_454545">#454545</color>
+</resources>

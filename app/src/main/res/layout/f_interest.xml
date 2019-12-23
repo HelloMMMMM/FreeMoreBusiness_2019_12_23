@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.home.vm.VMInterest"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg">
+
+        <View
+            android:id="@+id/v_head"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/home_head_h"
+            android:background="@color/home_head_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/img_head"
+            android:layout_width="@dimen/home_head_avatar_size"
+            android:layout_height="@dimen/home_head_avatar_size"
+            android:layout_marginLeft="@dimen/home_head_avatar_ml"
+            android:layout_marginBottom="@dimen/home_head_avatar_mb"
+            app:layout_constraintBottom_toBottomOf="@+id/v_head"
+            app:layout_constraintStart_toStartOf="@+id/v_head"/>
+
+        <TextView
+            android:id="@+id/tv_apply"
+            android:layout_width="@dimen/interest_apply_w"
+            android:layout_height="@dimen/interest_apply_h"
+            android:background="@drawable/ic_apply_bg"
+            android:gravity="center"
+            android:text="@string/interest_apply_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/interest_apply_text"
+            app:layout_constraintBottom_toBottomOf="@+id/v_head"
+            app:layout_constraintEnd_toEndOf="@+id/v_head"
+            app:layout_constraintTop_toTopOf="@+id/v_head"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/home_head_name_ml"
+            android:layout_marginTop="@dimen/home_head_name_mt"
+            android:layout_marginRight="@dimen/interest_apply_ml"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/home_head_name_text"
+            app:layout_constraintEnd_toStartOf="@+id/tv_apply"
+            app:layout_constraintStart_toEndOf="@+id/img_head"
+            app:layout_constraintTop_toTopOf="@+id/img_head"
+            tools:text="惊呼洗车行-中南路店"/>
+
+        <TextView
+            android:id="@+id/tv_addr"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/home_head_addr_mb"
+            android:singleLine="true"
+            android:textColor="@color/home_head_addr"
+            android:textSize="@dimen/home_head_addr_text"
+            app:layout_constraintBottom_toBottomOf="@+id/img_head"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            tools:text="武汉市武昌区楚河汉街1818"/>
+
+        <View
+            android:id="@+id/v_tabs"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/interest_tabs_h"
+            android:background="@color/interest_tabs_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_head"/>
+
+        <TextView
+            android:id="@+id/tv_my_interest"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:drawableBottom="@mipmap/ic_tabs_mark"
+            android:gravity="center"
+            android:text="@string/interest_my_apply_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/interest_tabs_text_sel"
+            app:layout_constraintBottom_toBottomOf="@+id/v_tabs"
+            app:layout_constraintEnd_toStartOf="@+id/tv_consume_record"
+            app:layout_constraintStart_toStartOf="@+id/v_tabs"
+            app:layout_constraintTop_toTopOf="@+id/v_tabs"/>
+
+        <TextView
+            android:id="@+id/tv_consume_record"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:gravity="center"
+            android:text="@string/interest_consume_record_text"
+            android:textColor="@color/interest_tabs_text_unsel"
+            android:textSize="@dimen/interest_tabs_text_unsel"
+            app:layout_constraintBottom_toBottomOf="@+id/v_tabs"
+            app:layout_constraintEnd_toEndOf="@+id/v_tabs"
+            app:layout_constraintStart_toEndOf="@+id/tv_my_interest"
+            app:layout_constraintTop_toTopOf="@+id/v_tabs"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_tabs"></android.support.v4.view.ViewPager>
+    </android.support.constraint.ConstraintLayout>
+</layout>

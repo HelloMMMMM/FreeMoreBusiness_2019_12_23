@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.merchant.account.vm.VMAddAccount"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/v_selector_area"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="20dip"
+            android:layout_marginRight="30dip"
+            android:background="@drawable/add_account_func_bg"
+            app:layout_constraintDimensionRatio="315:163"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+        <View
+            android:id="@+id/v_selector_split"
+            android:layout_width="1px"
+            android:layout_height="0dip"
+            android:background="#38EFEFEF"
+            app:layout_constraintBottom_toBottomOf="@+id/v_selector_area"
+            app:layout_constraintEnd_toEndOf="@+id/v_selector_area"
+            app:layout_constraintStart_toStartOf="@+id/v_selector_area"
+            app:layout_constraintTop_toTopOf="@+id/v_selector_area"/>
+
+        <TextView
+            android:id="@+id/tv_manipulator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/add_account_manipulator"
+            android:drawablePadding="15dip"
+            android:gravity="center_horizontal"
+            android:text="操作者"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/v_selector_area"
+            app:layout_constraintEnd_toStartOf="@+id/v_selector_split"
+            app:layout_constraintStart_toStartOf="@+id/v_selector_area"
+            app:layout_constraintTop_toTopOf="@+id/v_selector_area"/>
+
+        <TextView
+            android:id="@+id/tv_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/add_account_operator"
+            android:drawablePadding="15dip"
+            android:gravity="center_horizontal"
+            android:text="运营者"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/v_selector_area"
+            app:layout_constraintEnd_toEndOf="@+id/v_selector_area"
+            app:layout_constraintStart_toEndOf="@+id/v_selector_split"
+            app:layout_constraintTop_toTopOf="@+id/v_selector_area"/>
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_marginTop="50dip"
+            android:background="@null"
+            android:hint="请输入手机号（作为帐号）"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:singleLine="true"
+            android:textColor="@color/text_light_black"
+            android:textColorHint="@color/text_light_gray"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/v_selector_area"
+            app:layout_constraintStart_toStartOf="@+id/v_selector_area"
+            app:layout_constraintTop_toBottomOf="@+id/v_selector_area"/>
+
+        <View
+            android:id="@+id/v_phone_line"
+            android:layout_width="0dip"
+            android:layout_height="1px"
+            android:background="#DBDBDB"
+            app:layout_constraintEnd_toEndOf="@+id/ed_phone"
+            app:layout_constraintStart_toStartOf="@+id/ed_phone"
+            app:layout_constraintTop_toBottomOf="@+id/ed_phone"/>
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_marginTop="10dip"
+            android:background="@null"
+            android:hint="请输入帐号使用人名称"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:singleLine="true"
+            android:textColor="@color/text_light_black"
+            android:textColorHint="@color/text_light_gray"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/ed_phone"
+            app:layout_constraintStart_toStartOf="@+id/ed_phone"
+            app:layout_constraintTop_toBottomOf="@+id/v_phone_line"/>
+
+
+        <View
+            android:id="@+id/v_verify_line"
+            android:layout_width="0dip"
+            android:layout_height="1px"
+            android:background="#DBDBDB"
+            app:layout_constraintEnd_toEndOf="@+id/ed_name"
+            app:layout_constraintStart_toStartOf="@+id/ed_name"
+            app:layout_constraintTop_toBottomOf="@+id/ed_name"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dip"
+            android:layout_height="49dip"
+            android:layout_marginTop="115dip"
+            android:background="@drawable/login_btn"
+            android:text="确认"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/v_selector_area"
+            app:layout_constraintStart_toStartOf="@+id/v_selector_area"
+            app:layout_constraintTop_toBottomOf="@+id/v_verify_line"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

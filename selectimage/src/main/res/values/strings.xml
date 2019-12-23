@@ -1,0 +1,10 @@
+<resources>
+    <string name="selectimage_app_name">SelectImage</string>
+    <string name="selectimage_selectimg_permission_write_external_storage_tips">应用需要SD卡的写入与读取权限，以便能保存和读取一些数据...</string>
+    <string name="selectimage_library_preview_title">图片预览</string>
+    <string name="selectimage_library_selector_title">图片选择</string>
+    <string name="selectimage_folder_all">All Images</string>
+    <string name="selectimage_preview">Preview</string>
+    <string name="selectimage_msg_no_camera">No system camera found</string>
+    <string name="selectimage_msg_amount_limit">Select images amount is limit</string>
+</resources>

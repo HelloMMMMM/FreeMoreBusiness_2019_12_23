@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">baselib</string>
+
+    <string name="should_permission_default_tips">我们需要一些权限，以便应用程序能够正常工作，可在设置界面授予权限...</string>
+
+    <string name="hx_recycler_loadmore_loadding">正在加载中...</string>
+    <string name="hx_recycler_loadmore_end">没有更多数据</string>
+    <string name="hx_recycler_loadmore_empty">没有更多数据</string>
+    <string name="hx_recycler_loadmore_failed">正在加载中...</string>
+
+    <string name="baselib_permission_dialog_confirm">确定</string>
+    <string name="baselib_permission_dialog_cancel">取消</string>
+    <string name="baselib_http_exception_network">网络连接失败</string>
+    <string name="baselib_http_exception_json"></string>
+</resources>

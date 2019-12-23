@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_news"
+        android:layout_width="118dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="16.5dp"
+        android:src="@mipmap/test_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="45.5dp"
+        android:text="1个老顾客能带来10个新顾客，会员裂变越来越受欢迎！"
+        android:textColor="@color/c_333333"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_read_people_count"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_news"
+        app:layout_constraintTop_toTopOf="@id/iv_news" />
+
+    <TextView
+        android:id="@+id/tv_read_people_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:text="264823人看过"
+        android:textColor="@color/c_999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_news"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_intro" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.5dp"
+        android:text="12月03日"
+        android:textColor="@color/c_999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_news"
+        app:layout_constraintLeft_toRightOf="@id/tv_read_people_count"
+        app:layout_constraintTop_toBottomOf="@id/tv_intro" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/c_E0E0E0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

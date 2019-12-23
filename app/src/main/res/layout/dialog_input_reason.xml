@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/input_reason_bg"
+    android:padding="12dip">
+
+    <EditText
+        android:id="@+id/ed_reason"
+        android:layout_width="0dip"
+        android:layout_height="72dip"
+        android:background="@drawable/input_reason_input_bg"
+        android:gravity="left|top"
+        android:hint="请输入审核不通过原因"
+        android:padding="6dip"
+        android:textColor="@color/text_light_black"
+        android:textColorHint="@color/text_light_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dip"
+        android:padding="6dip"
+        android:text="确认"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_reason"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dip"
+        android:padding="6dip"
+        android:text="取消"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_confirm"
+        app:layout_constraintTop_toTopOf="@+id/tv_confirm"/>
+</android.support.constraint.ConstraintLayout>

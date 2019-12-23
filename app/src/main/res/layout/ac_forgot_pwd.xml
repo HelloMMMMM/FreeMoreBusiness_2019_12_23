@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.forgot.VMForgotPwd"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"/>
+
+        <TextView
+            android:id="@+id/tv_account_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_pwd_account"
+            android:textColor="@color/login_item_ed_text"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_account"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toTopOf="@+id/ed_account"/>
+
+        <EditText
+            android:id="@+id/ed_account"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/forgot_pwd_item_h"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请输入商家帐号"
+            android:maxLength="16"
+            android:paddingLeft="@dimen/forgot_pwd_item_ed_pl"
+            android:textColor="@color/login_item_ed_text"
+            android:textColorHint="@color/login_item_ed_hint"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toEndOf="@+id/tv_account_tips"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+        <View
+            android:id="@+id/v_account_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            android:layout_marginLeft="@dimen/forgot_pwd_plr"
+            android:layout_marginRight="@dimen/forgot_pwd_plr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_account"/>
+
+        <TextView
+            android:id="@+id/tv_phone_tips"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_pwd_phone"
+            android:textColor="@color/login_item_ed_text"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_phone"
+            app:layout_constraintEnd_toEndOf="@+id/tv_account_tips"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toTopOf="@+id/ed_phone"/>
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/forgot_pwd_item_h"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请输入注册时填写的手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/forgot_pwd_item_ed_pl"
+            android:textColor="@color/login_item_ed_text"
+            android:textColorHint="@color/login_item_ed_hint"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toEndOf="@+id/tv_phone_tips"
+            app:layout_constraintTop_toBottomOf="@+id/v_account_line"/>
+
+        <View
+            android:id="@+id/v_phone_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toBottomOf="@+id/ed_phone"/>
+
+        <TextView
+            android:id="@+id/tv_code_tips"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_pwd_code"
+            android:textColor="@color/login_item_ed_text"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_code"
+            app:layout_constraintEnd_toEndOf="@+id/tv_account_tips"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toTopOf="@+id/ed_code"/>
+
+        <EditText
+            android:id="@+id/ed_code"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/forgot_pwd_item_h"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="@dimen/forgot_pwd_item_ed_pl"
+            android:textColor="@color/login_item_ed_text"
+            android:textColorHint="@color/login_item_ed_hint"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toEndOf="@+id/tv_code_tips"
+            app:layout_constraintTop_toBottomOf="@+id/v_phone_line"/>
+
+        <TextView
+            android:id="@+id/tv_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/login_get_code_p"
+            android:paddingBottom="@dimen/login_get_code_p"
+            android:text="@string/login_get_code_text"
+            android:textColor="@color/login_forgot_pwd_text"
+            android:textSize="@dimen/login_get_code_text"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_code"
+            app:layout_constraintEnd_toEndOf="@+id/ed_code"
+            app:layout_constraintTop_toTopOf="@+id/ed_code"/>
+
+
+        <View
+            android:id="@+id/v_code_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toBottomOf="@+id/ed_code"/>
+
+        <TextView
+            android:id="@+id/tv_password_tips"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_pwd_pwd"
+            android:textColor="@color/login_item_ed_text"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_password"
+            app:layout_constraintEnd_toEndOf="@+id/tv_account_tips"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toTopOf="@+id/ed_password"/>
+
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/forgot_pwd_item_h"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="@dimen/forgot_pwd_item_ed_pl"
+            android:textColor="@color/login_item_ed_text"
+            android:textColorHint="@color/login_item_ed_hint"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toEndOf="@+id/tv_password_tips"
+            app:layout_constraintTop_toBottomOf="@+id/v_code_line"/>
+
+        <View
+            android:id="@+id/v_password_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toBottomOf="@+id/ed_password"/>
+
+        <TextView
+            android:id="@+id/tv_password_again_tips"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_pwd_pwd_again"
+            android:textColor="@color/login_item_ed_text"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_password_again"
+            app:layout_constraintEnd_toEndOf="@+id/tv_account_tips"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toTopOf="@+id/ed_password_again"/>
+
+        <EditText
+            android:id="@+id/ed_password_again"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/forgot_pwd_item_h"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="@dimen/forgot_pwd_item_ed_pl"
+            android:textColor="@color/login_item_ed_text"
+            android:textColorHint="@color/login_item_ed_hint"
+            android:textSize="@dimen/login_item_ed_text"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toEndOf="@+id/tv_password_again_tips"
+            app:layout_constraintTop_toBottomOf="@+id/v_password_line"/>
+
+        <View
+            android:id="@+id/v_password_again_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toBottomOf="@+id/ed_password_again"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_btn_h"
+            android:layout_marginTop="@dimen/forgot_pwd_btn_mt"
+            android:background="@drawable/login_btn"
+            android:gravity="center"
+            android:text="@string/forgot_pwd_btn_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_btn_text"
+            app:layout_constraintEnd_toEndOf="@+id/v_account_line"
+            app:layout_constraintStart_toStartOf="@+id/v_account_line"
+            app:layout_constraintTop_toBottomOf="@+id/v_password_again_line"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

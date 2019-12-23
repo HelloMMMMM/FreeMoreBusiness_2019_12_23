@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.fx.feemore.business.util.VerificationUtil"/>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.AccountBean"/>
+    </data>
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dip"
+            android:paddingTop="9dip"
+            android:paddingRight="12dip"
+            android:paddingBottom="9dip">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="8"
+                android:text="@{VerificationUtil.verifyDefault(item.NAME,item.ACCOUNT)}"
+                android:textColor="@color/text_dark_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="王五"/>
+
+            <TextView
+                android:id="@+id/tv_character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.TYPE==1?`运营者`:`操作者`}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="运营者"/>
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dip"
+                android:text="@{VerificationUtil.verifyDefault(item.ACCOUNT)}"
+                android:textColor="@color/text_gray"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:text="13632216625"/>
+        </android.support.constraint.ConstraintLayout>
+        <!-- 以下都是侧滑菜单的内容依序排列 -->
+        <TextView
+            android:id="@+id/tv_remove"
+            android:layout_width="90dip"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</layout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.OrderBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/order_item_img_size"
+            android:layout_height="@dimen/order_item_img_size"
+            android:layout_marginLeft="@dimen/order_item_img_mlr"
+            android:layout_marginTop="@dimen/order_item_img_mt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/order_item_name_ml"
+            android:layout_marginRight="@dimen/order_item_img_mlr"
+            android:singleLine="true"
+            android:textColor="@color/order_item_name_text"
+            android:textSize="@dimen/order_item_name_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img"
+            tools:text="至尊精洗10次"/>
+
+        <TextView
+            android:id="@+id/tv_order_project"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/order_item_project_mt"
+            android:singleLine="true"
+            android:textColor="@color/order_item_name_text"
+            android:textSize="@dimen/order_item_project_text"
+            app:layout_constraintEnd_toEndOf="@+id/tv_order_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_order_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_name"
+            tools:text="项目：洗车"/>
+
+        <TextView
+            android:id="@+id/tv_order_num"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/order_item_name_text"
+            android:textSize="@dimen/order_item_project_text"
+            app:layout_constraintBottom_toBottomOf="@+id/img"
+            app:layout_constraintEnd_toEndOf="@+id/tv_order_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_order_name"
+            tools:text="订单编号：566655422233"/>
+
+        <TextView
+            android:id="@+id/tv_order_time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/order_item_name_text"
+            android:textSize="@dimen/order_item_project_text"
+            app:layout_constraintBottom_toTopOf="@+id/tv_order_num"
+            app:layout_constraintEnd_toEndOf="@+id/tv_order_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_order_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_project"
+            tools:text="时间：2018-12-24 15:00"/>
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="@dimen/order_item_img_status_w"
+            android:layout_height="@dimen/order_item_img_status_h"
+            android:layout_marginTop="@dimen/order_item_img_status_mtr"
+            android:layout_marginRight="@dimen/order_item_img_status_mtr"
+            android:src="@mipmap/ic_order_pass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/v_line"
+            style="@style/h_line"
+            android:layout_width="0dip"
+            android:layout_marginTop="@dimen/order_line_mt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img"/>
+
+        <View
+            android:id="@+id/v_space_top"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/order_item_btn_mtb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_line"/>
+
+        <Button
+            android:id="@+id/btn_turn_down"
+            android:layout_width="@dimen/order_item_btn_w"
+            android:layout_height="@dimen/order_item_btn_h"
+            android:layout_marginRight="@dimen/order_item_btn_mend"
+            android:background="@drawable/order_item_btn"
+            android:text="@string/order_item_turn_down"
+            android:textColor="@color/order_item_btn_text"
+            android:textSize="@dimen/order_item_btn_text"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_space_top"/>
+
+        <Button
+            android:id="@+id/btn_pass"
+            android:layout_width="@dimen/order_item_btn_w"
+            android:layout_height="@dimen/order_item_btn_h"
+            android:layout_marginRight="@dimen/order_item_btn_mr"
+            android:background="@drawable/order_item_btn"
+            android:text="@string/order_item_pass"
+            android:textColor="@color/order_item_btn_text"
+            android:textSize="@dimen/order_item_btn_text"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/btn_turn_down"
+            app:layout_constraintTop_toBottomOf="@+id/v_space_top"/>
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/order_item_btn_h"
+            android:layout_marginRight="@dimen/order_item_status_des_mr"
+            android:gravity="center"
+            android:text="@string/order_item_wait_consume_des"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/order_item_status_des_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_space_top"/>
+
+        <View
+            android:id="@+id/v_space_bottom"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/order_item_btn_mtb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_turn_down"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

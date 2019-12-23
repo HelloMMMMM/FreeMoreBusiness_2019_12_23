@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/appTextView</item>
+        <item name="android:buttonStyle">@style/appButton</item>
+        <item name="android:listDivider">@drawable/base_divider</item>
+
+        <item name="actionBarSize">@dimen/base_toolbar_height</item>
+        <item name="toolbarStyle">@style/BaseToolBar</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+        <item name="android:actionMenuTextAppearance">@style/BaseActionMenuStyle</item>
+    </style>
+
+    <!--去除textView默认边距-->
+    <style name="appTextView">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!--通过继承去除按钮默认阴影，设置background为null，去除默认的背景添加的padding-->
+    <style name="appButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--toolbar默认样式-->
+    <style name="BaseToolBar">
+        <item name="android:background">@android:color/white</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="navigationIcon">@drawable/ic_back</item>
+    </style>
+
+    <!--toolbar 菜单按钮默认样式-->
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">45dp</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--toolbar 标题文本样式-->
+    <style name="TitleTextAppearance" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--菜单按钮样式-->
+    <style name="BaseActionMenuStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <!--禁止英文全大写-->
+        <item name="textAllCaps">false</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.ConsumeRecordBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/interset_my_item_h"
+        android:background="@android:color/white"
+        android:minHeight="@dimen/interset_my_item_h"
+        android:paddingLeft="@dimen/interest_my_item_plr"
+        android:paddingRight="@dimen/interest_my_item_plr">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/interest_my_item_img_size"
+            android:layout_height="@dimen/interest_my_item_img_size"
+            android:layout_marginTop="@dimen/interest_my_item_img_mt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/interest_my_item_name_ml"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="途虎洗车十次"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/interest_my_item_name_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img"
+            tools:text="途虎洗车十次"/>
+
+        <TextView
+            android:id="@+id/tv_project"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/interest_consume_record_project_mt"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="项目：洗车"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/interest_consume_record_project_text"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            tools:text="项目：洗车"/>
+
+        <TextView
+            android:id="@+id/tv_use_time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/interest_consume_record_use_mt"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="使用时间：2018-12-30 15:00"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/interest_consume_record_use_text"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_project"
+            tools:text="使用时间：2018-12-30 15:00"/>
+
+        <TextView
+            android:id="@+id/tv_order_num"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/interest_consume_record_use_mt"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="订单编号：2018123054695122"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/interest_consume_record_use_text"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_use_time"
+            tools:text="订单编号：2018123054695122"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

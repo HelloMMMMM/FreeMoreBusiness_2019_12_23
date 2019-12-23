@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.ApplyRecordBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/v_head"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/apply_record_item_head_h"
+            android:background="@color/apply_record_item_head_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/apply_record_item_img_size"
+            android:layout_height="@dimen/apply_record_item_img_size"
+            android:layout_marginLeft="@dimen/apply_record_item_img_ml"
+            app:layout_constraintBottom_toBottomOf="@+id/v_head"
+            app:layout_constraintStart_toStartOf="@+id/v_head"
+            app:layout_constraintTop_toTopOf="@+id/v_head"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/apply_record_item_name_ml"
+            android:layout_marginRight="@dimen/apply_record_item_name_mr"
+            android:textColor="@color/apply_record_item_name_text"
+            android:textSize="@dimen/apply_record_item_name_text"
+            app:layout_constraintBottom_toBottomOf="@+id/v_head"
+            app:layout_constraintEnd_toEndOf="@+id/v_head"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/v_head"
+            tools:text="惊呼洗车行"/>
+
+        <View
+            android:id="@+id/v_progress"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/v_bottom_space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_head"/>
+
+        <View
+            android:id="@+id/v_progress_mark"
+            android:layout_width="0dip"
+            android:layout_height="10dip"
+            android:layout_marginLeft="45dip"
+            android:layout_marginTop="15dip"
+            android:layout_marginRight="45dip"
+            android:background="@drawable/apply_record_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/v_progress"/>
+
+        <View
+            android:id="@+id/v_progress_complete_mark"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_marginLeft="30dip"
+            android:background="@drawable/apply_record_progress_complete"
+            app:layout_constraintBottom_toBottomOf="@+id/v_progress_mark"
+            app:layout_constraintStart_toStartOf="@+id/v_progress_mark"
+            app:layout_constraintTop_toTopOf="@+id/v_progress_mark"/>
+
+        <TextView
+            android:id="@+id/tv_progressing"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dip"
+            android:text="审核中"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/v_progress_complete_mark"
+            app:layout_constraintStart_toStartOf="@+id/v_progress_complete_mark"
+            app:layout_constraintTop_toBottomOf="@+id/v_progress_complete_mark"/>
+
+        <View
+            android:id="@+id/v_progress_undo"
+            android:layout_width="70dip"
+            android:layout_height="10dip"
+            android:background="@drawable/apply_record_progress_undo"
+            app:layout_constraintBottom_toBottomOf="@+id/v_progress_mark"
+            app:layout_constraintEnd_toEndOf="@+id/v_progress_mark"
+            app:layout_constraintTop_toTopOf="@+id/v_progress_mark"/>
+
+        <View
+            android:id="@+id/v_progress_undo_mark"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:background="@drawable/apply_record_progress_undo_mark"
+            app:layout_constraintBottom_toBottomOf="@+id/v_progress_undo"
+            app:layout_constraintEnd_toEndOf="@+id/v_progress_undo"
+            app:layout_constraintStart_toStartOf="@+id/v_progress_undo"
+            app:layout_constraintTop_toTopOf="@+id/v_progress_undo"/>
+
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dip"
+            android:textColor="#80333333"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/v_progress_undo_mark"
+            app:layout_constraintStart_toStartOf="@+id/v_progress_undo_mark"
+            app:layout_constraintTop_toBottomOf="@+id/v_progress_undo_mark"
+            tools:text="审核通过"/>
+
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:textColor="@color/text_light_gray"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/img"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pass"
+            tools:text="驳回原因：审核不通过"/>
+
+        <View
+            android:id="@+id/v_bottom_space"
+            android:layout_width="0dip"
+            android:layout_height="8dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_remark"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

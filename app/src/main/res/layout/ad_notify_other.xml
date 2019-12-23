@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="String"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="75dip"
+            android:layout_height="28dip"
+            android:background="@drawable/notify_order_time_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="昨天 15:26"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="9dip"
+            android:layout_marginRight="6dip"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="3dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="10dip"
+                    android:textColor="#222222"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="您有一笔待成团的订单"/>
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="66dip"
+                    android:layout_height="66dip"
+                    android:layout_marginTop="10dip"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_commodity_name"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_light_black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                    app:layout_constraintStart_toEndOf="@+id/img"
+                    app:layout_constraintTop_toTopOf="@+id/img"
+                    tools:text="途虎洗车十次"/>
+
+                <TextView
+                    android:id="@+id/tv_order_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:textColor="@color/text_light_black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_commodity_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_commodity_name"
+                    tools:text="下单时间：2018-12-12 15:30"/>
+
+                <TextView
+                    android:id="@+id/tv_order_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dip"
+                    android:textColor="@color/text_light_black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/img"
+                    app:layout_constraintStart_toStartOf="@+id/tv_commodity_name"
+                    tools:text="订单编号：564889715623"/>
+
+                <View
+                    android:id="@+id/v_order_info_line"
+                    android:layout_width="0dip"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="13dip"
+                    android:background="#EEEEEE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:textColor="#555555"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/v_order_info_line"
+                    tools:text="您有一笔新的待成团订单，请点击进入订单详情后，尽快处理。"/>
+
+                <View
+                    android:id="@+id/v_des_line"
+                    android:layout_width="0dip"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="8dip"
+                    android:background="#EEEEEE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_des"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dip"
+                    android:gravity="center_vertical"
+                    android:text="查看详情 >"
+                    android:textColor="#222222"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                    app:layout_constraintTop_toBottomOf="@+id/v_des_line"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+</layout>

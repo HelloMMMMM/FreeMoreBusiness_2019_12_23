@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fx.feemore.business">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 获取CUID，用于鉴权，请求签名等 -->
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".app.AppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/icons"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/icons"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="p9y4mclHr6ZOhU1po9MVdSLCQ3Oo98Mg" />
+
+        <activity
+            android:name=".ui.character.AcCharacterSelected"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.AcLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.forgot.AcForgotPwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.register.AcRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.register.AcInputData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.apply.AcApplyRecord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.apply.AcPayDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcReserveationReject"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcReservationDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcOrderRightsProtection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcOrderComplete"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.interest.AcInterestDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.interest.AcPublishInterest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.finance.AcIncomeRecord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.finance.AcAddCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.finance.AcWithdraw"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.finance.AcWithdrawDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcMember"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcMyActive"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcInitateActive"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcActiveDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcMyAlliance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcAllianceQRCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcInitateAlliance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcAppyInterest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcApplyInterestDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcApplayActive"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcApplyActiveDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transaction.AcTransactionData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.notify.AcNotifyManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcOrderManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.commodity.AcCommodityManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcCommentDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcWaitGroupDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcRightsProtection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcCompleteDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.apply.AcApplyManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.apply.AcApplyDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.interest.AcPublishInterestV2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.finance.AcMyBank"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.finance.AcWithdrawRecord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.register.AcMapSelection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.set.AcMerchantSet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.set.AcSecurity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.set.AcChangePhone"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.margin.AcMyMargin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.team.AcMyTeam"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.AcOrderWriteOff"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.about.AcAbout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.commodity.AcConsumeDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.AcAllianceList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.account.AcAddAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.review.AcReview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.merchant.account.AcAccountList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1108194825" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".ui.finance.AcFinance" />
+        <activity android:name=".ui.luckdraw.AcLuckDraw" />
+
+        <receiver
+            android:name=".receive.JPushReceive"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.fx.feemore.business" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

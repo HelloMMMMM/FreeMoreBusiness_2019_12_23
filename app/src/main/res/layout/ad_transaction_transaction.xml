@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.TransactionBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="65dip"
+        android:minHeight="65dip">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="39dip"
+            android:layout_height="39dip"
+            android:layout_marginLeft="14dip"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginRight="14dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{String.format(@string/transaction_data_des,item.NICKNAME,item.NAME)}"
+            android:textColor="@color/text_light_black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img"
+            tools:text="XX购买了途虎洗车十次权益包"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@{item.ORDERTIME}"
+            android:textColor="#777777"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img"
+            app:layout_constraintEnd_toEndOf="@+id/tv_des"
+            app:layout_constraintStart_toStartOf="@+id/tv_des"
+            tools:text="2018-12-12 12:12"/>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dip"
+            android:background="#E6E6E6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.merchant.vm.VMInitateAlliance"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_alliance_title_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:text="联盟主题"
+            android:textColor="@color/text_light_black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+        <EditText
+            android:id="@+id/ed_title"
+            android:layout_width="0dip"
+            android:layout_height="38dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/initate_alliance_input"
+            android:hint="请输入联盟主题"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:singleLine="true"
+            android:textColor="@color/text_light_black"
+            android:textColorHint="#80333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_alliance_title_tips"/>
+
+        <TextView
+            android:id="@+id/tv_code_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:gravity="center_vertical"
+            android:text="添加微信联盟二维码"
+            android:textColor="@color/text_light_black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_alliance_title_tips"
+            app:layout_constraintTop_toBottomOf="@+id/ed_title"/>
+
+        <LinearLayout
+            android:id="@+id/ll_code"
+            android:layout_width="240dip"
+            android:layout_height="200dip"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/initate_alliance_code"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_code_tips">
+
+            <ImageView
+                android:id="@+id/img_add"
+                android:layout_width="73dip"
+                android:layout_height="73dip"
+                android:background="@drawable/initate_alliance_add"
+                android:scaleType="center"
+                android:src="@mipmap/ic_initate_add"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dip"
+                android:text="请上传您建立的联盟二维码"
+                android:textColor="#4C333333"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_code"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_code"
+            app:layout_constraintEnd_toEndOf="@+id/ll_code"
+            app:layout_constraintStart_toStartOf="@+id/ll_code"
+            app:layout_constraintTop_toTopOf="@+id/ll_code"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/login_btn_h"
+            android:layout_marginLeft="27dip"
+            android:layout_marginTop="70dip"
+            android:layout_marginRight="27dip"
+            android:background="@drawable/login_btn"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_code"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

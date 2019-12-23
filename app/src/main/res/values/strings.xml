@@ -1,0 +1,373 @@
+<resources>
+    <string name="app_name">免好多</string>
+
+    <string name="permission_write_external_storage_tips">应用需要SD卡的写入与读取权限，以便能保存和读取一些数据...</string>
+    <string name="permission_read_phone_state_tips">应用需要手机状态读取权限，以便能读取一些数据&#8230;</string>
+    <string name="permission_fine_location_tips">应用需要手机位置读取权限，以便能获取您的位置信息&#8230;</string>
+    <string name="permission_record_audio_tips">应用需要手机麦克风访问权限，以便能语音录制，进行语音聊天&#8230;</string>
+    <string name="permission_camera_tips">应用需要手机摄像头访问权限，以便能使用相机拍摄照片&#8230;</string>
+
+
+    <string name="character_app_title">免&#160;好&#160;多</string>
+    <string name="character_business">商&#160;家&#160;版</string>
+    <string name="character_proxy">代&#160;理&#160;版</string>
+
+    <string name="progress_tips">请稍候&#8230;</string>
+
+    <string name="login_title">登录</string>
+    <string-array name="login_tabs">
+        <item>账号密码登录</item>
+        <item>手机验证登录</item>
+    </string-array>
+    <string name="login_btn">登录</string>
+    <string name="login_register">注册开店</string>
+    <string name="login_forgot_pwd">忘记密码？</string>
+    <string name="login_get_code_text">获取短信验证码</string>
+
+    <string name="forgot_pwd_title">忘记密码</string>
+    <string name="forgot_pwd_account">商家帐号</string>
+    <string name="forgot_pwd_phone">手机号</string>
+    <string name="forgot_pwd_code">验证码</string>
+    <string name="forgot_pwd_pwd">密码</string>
+    <string name="forgot_pwd_pwd_again">验证密码</string>
+    <string name="forgot_pwd_btn_text">确认</string>
+
+    <string name="register_title">商家注册</string>
+    <string name="register_step_first">手机号注册</string>
+    <string name="register_btn_first">下一步</string>
+    <string name="code_countdown_hint">秒</string>
+    <string name="register_btn_second">确定</string>
+    <string name="register_step_second">验证码已发送至：</string>
+    <string name="register_goto_login">已有帐号，去登录 &gt;</string>
+    <string name="register_send_phone_tips">手机号%s，请查收</string>
+
+    <string name="input_data_title">入驻申请信息</string>
+    <string name="input_data_name">店铺名称</string>
+    <string name="input_data_type">店铺类型</string>
+    <string name="input_data_city">所在城市</string>
+    <string name="input_data_address">店铺地址</string>
+    <string name="input_data_shop_photo">1，门店照片</string>
+    <string name="input_data_shop_photo_tips">需拍出完整门匾，门框（建议正对门2米处拍摄）</string>
+    <string name="input_data_environmental_photo">2，店内环境照片</string>
+    <string name="input_data_environmental_photo_tips">需真实反映店内环境</string>
+    <string name="input_data_idcard_photo">3，法定代表人手持身份证照</string>
+    <string name="input_data_idcard_photo_tips">需清晰展示人物五官及身份证信息，需拍摄手持身份证国徽面、头像面两张图片；不可自拍，不可只拍身份证</string>
+    <string name="input_data_business_license_photo">4，营业执照</string>
+    <string name="input_data_business_license_photo_tips">需文字清晰，边框完整，露出国徽拍复印件需加印章， 可用有效特许证件代替</string>
+    <string name="input_data_merchant_settlement_agreement">阅读商户入驻协议</string>
+    <string name="input_data_btn_text">确认</string>
+
+    <string-array name="input_data_shop_types">
+        <item>点击选择</item>
+        <item>店铺1</item>
+        <item>店铺2</item>
+    </string-array>
+    <string-array name="input_data_cities">
+        <item>选择城市</item>
+        <item>宜昌</item>
+        <item>武汉</item>
+    </string-array>
+
+    <string name="main_item_home">首页</string>
+    <string name="main_item_interest">权益包</string>
+    <string-array name="home_tabs">
+        <item>预约</item>
+        <item>待消费</item>
+        <item>维权</item>
+        <item>已完成</item>
+    </string-array>
+
+    <string name="order_item_turn_down">预约驳回</string>
+    <string name="order_item_pass">预约通过</string>
+    <string name="order_right_protection_pass">同意维权</string>
+    <string name="order_right_protection_turn_down">驳回维权</string>
+    <string name="order_item_wait_consume_des">已通过预约，待使用</string>
+
+    <string name="apply_record_title">申请记录</string>
+    <string name="apply_record_item_option">去缴纳保证金&gt;&gt;</string>
+
+    <string name="pay_deposit_title">保证金</string>
+    <string name="pay_deposit_tips">需缴纳保证金</string>
+    <string name="pay_deposit_wechat_pay">微信支付</string>
+    <string name="pay_deposit_alipay_pay">支付宝支付</string>
+    <string name="pay_deposit_btn">立即缴纳</string>
+    <string name="pay_deposit_des_tips">保证金说明</string>
+
+    <string name="reservation_reject_title">预约驳回</string>
+    <string name="reservation_reject_reason_title">驳回理由*</string>
+    <string name="reservation_reject_des_title">驳回说明*</string>
+    <string name="reservation_reject_btn_text">确认</string>
+    <string-array name="reservation_reject_types">
+        <item>当天的预约已满</item>
+        <item>该时间点暂时不营业</item>
+        <item>店内正在装修</item>
+        <item>其它</item>
+    </string-array>
+
+    <string name="reservation_detail_title">预约详情</string>
+    <string name="reservation_detail_status_pass">已预约通过</string>
+    <string name="reservation_detail_status_rejct">预约被驳回</string>
+    <string name="reservation_detail_remind_count">剩余%s次</string>
+    <string name="reservation_detail_commodity_des">购买此权益包，到商家可享受十次洗车服务</string>
+    <string name="reservation_detail_info_project">项目：%s</string>
+    <string name="reservation_detail_info_time">预约时间：%s</string>
+    <string name="reservation_detail_info_use_time">使用时间：%s</string>
+    <string name="reservation_detail_info_order_num">订单编号：%s</string>
+    <string name="reservation_detail_info_remark">备注：%s</string>
+
+    <string name="order_complete_title">订单详情</string>
+    <string name="order_complete_comment_tips">用户评价</string>
+    <string name="order_complete_comment_answer_tips">快去回复他</string>
+
+    <string name="order_rights_protection_title">维权详情</string>
+    <string name="order_rights_protection_apply_tips">用户申请维权，待处理</string>
+
+    <string name="interest_apply_text">申请</string>
+    <string name="interest_my_apply_text">我的权益包</string>
+    <string name="interest_consume_record_text">权益包消费记录</string>
+
+    <string name="interest_detail_title">权益包详情</string>
+    <string name="interest_detail_use_time_text">使用时间</string>
+    <string name="interest_detail_validity_period_text">有效期</string>
+    <string name="interest_detail_reservation_time_text">预约时间</string>
+    <string name="interest_detail_use_rule_text">使用规则</string>
+
+    <string name="publish_interest_title">发布权益包</string>
+    <string name="publish_interest_photo_tips">商品产品图</string>
+    <string name="publish_interest_photo_add_tips">(可添加6张商品图片)</string>
+    <string name="publish_interest_des_tips">商品描述</string>
+    <string name="publish_interest_name_tips">权益名称:</string>
+    <string name="publish_interest_price_tips">权益价格:</string>
+    <string name="publish_interest_business_hours_tips">营业时间</string>
+    <string name="publish_interest_type_tips">商品类别</string>
+    <string name="publish_interest_contact_tips">联系方式:</string>
+    <string name="publish_interest_btn_text">提交</string>
+
+    <string name="finance_withdraw_text">提现</string>
+    <string name="finance_withdraw_time">提现时间：%s</string>
+
+    <string name="add_card_title">添加银行卡</string>
+
+    <string name="withdraw_title">余额提现</string>
+
+    <string name="person_title">信息管理</string>
+
+    <string name="member_title">排行榜</string>
+
+    <string name="my_active_title">我发起的活动</string>
+
+    <string name="initate_active_title">活动权益包</string>
+
+    <string name="active_detail_title">活动详情</string>
+
+    <string name="my_alliance_title">我发起的联盟</string>
+
+    <string name="initate_alliance_title">发起联盟</string>
+
+    <string name="apply_interest_title">我的权益包申请</string>
+
+    <string-array name="apply_interest_tabs">
+        <item>审核通过</item>
+        <item>审核中</item>
+        <item>审核未通过</item>
+    </string-array>
+
+    <string name="apply_interest_detail_title">申请详情</string>
+
+    <string name="apply_active_title">活动权益包申请</string>
+
+    <string name="apply_active_detail_title">申请详情</string>
+
+    <string-array name="transaction_data_tabs">
+        <item>交易额</item>
+        <item>访客</item>
+        <item>收藏</item>
+        <item>成交数量</item>
+    </string-array>
+    <string-array name="notify_manager_tabs">
+        <item>订单通知</item>
+        <!--<item>其他通知</item>-->
+    </string-array>
+    <string-array name="order_manager_tabs">
+        <item>评价</item>
+        <item>待成团</item>
+        <item>维权</item>
+        <item>已完成</item>
+    </string-array>
+
+    <string-array name="commodity_manager_tabs">
+        <item>发布中</item>
+        <item>已下架</item>
+        <item>消费记录</item>
+    </string-array>
+
+    <string-array name="apply_manager_tabs">
+        <item>申请中</item>
+        <item>未通过</item>
+        <item>已通过</item>
+    </string-array>
+
+    <string name="apply_item_type">权益包类型：%s</string>
+    <string name="apply_item_time">申请时间：%s</string>
+
+    <string name="apply_info_remark">备注：%s</string>
+    <string name="apply_info_consume_time">上午&#160;%s&#160;&#160;下午&#160;%s</string>
+
+    <string name="commodity_using_interest_type_normal">普通权益包</string>
+    <string name="commodity_using_interest_type_group">拼团权益包</string>
+    <string name="commodity_using_interest_publish_time">发布时间：%s</string>
+    <string name="commodity_using_interest_sale">已售%s件，剩余%s件</string>
+    <string name="commodity_using_interest_price">￥%s</string>
+    <string name="commodity_consume_record_use_time">使用时间：%s</string>
+    <string name="commodity_consume_record_consumption_times">核销%s次</string>
+
+
+    <string name="order_rights_protection_order_time">下单时间：%s</string>
+    <string name="order_rights_protection_order_num">订单编号：%s</string>
+    <string name="order_rights_protection_order_price">实收：￥%s</string>
+    <string name="order_rights_protection_order_reason">退款原因：%s</string>
+    <string name="order_rights_protection_order_refund_type">退款申请：%s</string>
+    <string name="order_rights_protection_order_refund_money">退款金额：￥%s</string>
+    <string name="order_rights_protection_order_refund_time">操作时间：%s</string>
+
+    <string name="order_comment_create_time">评价时间：%s</string>
+    <string name="order_comment_consume_time">消费时间：%s</string>
+
+    <string name="transaction_data_des">%s购买了%s权益包</string>
+    <string name="visitor_data_des">%s查看了%s权益包</string>
+    <string name="collection_data_des">%s收藏了%s权益包</string>
+
+    <string name="consume_write_off_count">当次核销%s次</string>
+    <string name="consume_write_off_time">核销时间：%s</string>
+    <string name="consume_write_off_remain_count">剩余%s次</string>
+
+    <string name="team_level_item_des">%s购买了%s</string>
+    <string name="team_level_item_time">购买时间：%s</string>
+    <string name="team_level_item_reward">+%s</string>
+    <string name="team_level_tab_one">一级(%s)</string>
+    <string name="team_level_tab_two">二级(%s)</string>
+
+    <string name="withdraw_detail_card_tips">%s &#160;尾号%s</string>
+    <string name="withdraw_detail_money_transfer_time">汇款时间：%s</string>
+    <string name="withdraw_detail_refused_tips">驳回原因：%s</string>
+
+    <string name="withdraw_banlance_text">可提现：%s</string>
+    <string name="withdraw_fees_tips">到账金额：￥%1$s，手续费：￥%2$s；转账费率%3$s%%</string>
+
+
+    <!--v3新增-->
+    <string name="main_item_drainage">引流案例</string>
+    <string name="main_item_util">工具</string>
+    <string name="main_item_mine">我的</string>
+    <!--首页-->
+    <string name="home_v3_title">首页</string>
+
+    <string name="home_v3_scan">扫码核销</string>
+
+    <string name="home_v3_verify">完成店铺认证</string>
+    <string name="home_v3_equity">发布一个权益</string>
+    <string name="home_v3_publish">立即发布</string>
+    <string name="home_v3_base_info_tip">激活店铺后解锁全部功能</string>
+
+    <string name="home_v3_base_info_my_data_title">我的数据</string>
+    <string name="home_v3_base_info_my_data_1">我的会员</string>
+    <string name="home_v3_base_info_my_data_2">我的抽奖</string>
+    <string name="home_v3_base_info_my_data_3">权益包被使用</string>
+    <string name="home_v3_base_info_my_data_4">定制卡销售额</string>
+    <string name="home_v3_base_info_my_data_5">权益包销售额</string>
+    <string name="home_v3_base_info_my_data_6">活动券销售额</string>
+
+    <string name="home_v3_data_title">平台数据</string>
+    <string name="home_v3_data_label_1">平台会员</string>
+    <string name="home_v3_data_label_2">平台抽奖</string>
+    <string name="home_v3_data_label_3">最火权益</string>
+    <string name="home_v3_data_label_4">定制卡销售额</string>
+    <string name="home_v3_data_label_5">权益包销售额</string>
+    <string name="home_v3_data_label_6">活动券销售额</string>
+
+    <string name="home_v3_enter_1">商圈商家</string>
+    <string name="home_v3_enter_2">快速提升</string>
+    <string name="home_v3_enter_3">员工管理</string>
+    <string name="home_v3_enter_4">活动推荐</string>
+
+    <string name="home_v3_case_title">学习案例</string>
+
+    <string name="home_v3_activity_title">活动模板</string>
+    <string name="home_v3_activity_luck_draw">抽奖模块</string>
+    <string name="home_v3_activity_create">创建同款活动</string>
+
+
+    <!--我的-->
+    <string name="mine_title">个人中心</string>
+
+    <string name="mine_balance_label">余额</string>
+    <string name="mine_amount_label">实收总金额</string>
+
+    <string name="mine_store_level">店铺等级</string>
+    <string name="mine_amount_detail">账户明细</string>
+    <string name="mine_child_account_manager">子账号管理</string>
+    <string name="mine_check">运营审核</string>
+    <string name="mine_child_store_manager">分店管理</string>
+    <string name="mine_setting">我的设置</string>
+
+    <!--工具-->
+    <string name="util_title">工具</string>
+
+    <string name="util_option">操作</string>
+    <string name="util_option_publish_equity">发布权益包</string>
+    <string name="util_option_publish_luck_draw">发布抽奖</string>
+
+    <string name="util_gm">商品管理</string>
+    <string name="util_gm_equity">权益管理</string>
+    <string name="util_gm_luck_draw">抽奖管理</string>
+    <string name="util_gm_card">定制卡管理</string>
+    <string name="util_gm_activity">活动管理</string>
+
+    <string name="util_data">数据管理</string>
+    <string name="util_data_order">订单管理</string>
+    <string name="util_data_operate">运营管理</string>
+    <string name="util_data_staff">员工管理</string>
+
+    <string name="util_operate">营销模块</string>
+    <string name="util_operate_business_circle">商家商圈</string>
+    <string name="util_operate_up">快速提升</string>
+    <string name="util_operate_activity">活动推荐</string>
+
+    <string name="util_other">其他</string>
+    <string name="util_other_customer_service">客服答疑</string>
+    <string name="util_other_rate">评价</string>
+    <string name="util_other_message">消息通知</string>
+    <string name="util_other_request">申请管理</string>
+
+    <!--引流案例-->
+    <string name="drainage_card_title">精选1000个引流案例</string>
+    <string name="drainage_card_step_1">添加策划师</string>
+    <string name="drainage_card_step_2">告知解锁账号</string>
+    <string name="drainage_card_step_3">解锁案例</string>
+
+    <!--数据format-->
+    <string name="v3_data_format_people">%1$s人</string>
+    <string name="v3_data_format_second">%1$s次</string>
+    <string name="v3_data_format_rmb">%1$s元</string>
+
+    <!--发布抽奖权益-->
+    <string name="publish_luck_draw_title">发布抽奖</string>
+    <string name="publish_luck_draw_select_type">选择抽奖权益</string>
+    <string name="publish_luck_draw_title_input_label">标题</string>
+    <string name="publish_luck_draw_title_input_limit">%1$d/20</string>
+    <string name="publish_luck_draw_title_input_hint">例如：途虎洗车十次</string>
+    <string name="publish_luck_draw_start_date">开始日期</string>
+    <string name="publish_luck_draw_end_date">截止日期</string>
+    <string name="publish_luck_draw_date_input_hint">请选择</string>
+    <string name="publish_luck_draw_contact">联系方式</string>
+    <string name="publish_luck_draw_contact_hint">请输入联系方式</string>
+    <string name="publish_luck_draw_rate_setting">概率设置</string>
+    <string name="publish_luck_draw_rate">%1$f%</string>
+    <string name="publish_luck_draw_remark">备注</string>
+    <string name="publish_luck_draw_remark_hint">请输入内容</string>
+    <string name="publish_luck_draw_remark_limit">%1$d/50</string>
+    <string name="publish_luck_draw_sure">确认</string>
+    <string name="publish_luck_draw_cancel">取消</string>
+
+    <string name="service_money">您还未缴纳服务保证金！缴纳服务保证金后才可发布权益包~</string>
+</resources>

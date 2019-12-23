@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.merchant.vm.VMAllianceQRCode"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3C4041">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/v_bg"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:background="#3C4041"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:id="@+id/v_content"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_marginLeft="22dip"
+            android:layout_marginTop="36dip"
+            android:layout_marginRight="22dip"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_tips"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+        <TextView
+            android:id="@+id/tv_alliance_title"
+            android:layout_width="wrap_content"
+            android:layout_height="62dip"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/v_content"
+            app:layout_constraintStart_toStartOf="@+id/v_content"
+            app:layout_constraintTop_toTopOf="@+id/v_content"
+            tools:text="洗车大优惠，好礼送不停"/>
+
+        <ImageView
+            android:id="@+id/img_code"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:scaleType="centerInside"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/v_content"
+            app:layout_constraintStart_toStartOf="@+id/v_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_alliance_title"/>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:gravity="center"
+            android:text="扫描二维码，加入联盟"
+            android:textColor="#606060"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/v_content"
+            app:layout_constraintStart_toStartOf="@+id/v_content"
+            app:layout_constraintTop_toBottomOf="@+id/img_code"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fx.feemore.business.ui.interest.vm.VMInterestDetail"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/base_layout_toolbar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="@dimen/interest_detail_img_size"
+                    android:layout_height="@dimen/interest_detail_img_size"
+                    android:layout_marginLeft="@dimen/interest_detail_plr"
+                    android:layout_marginTop="@dimen/interest_detail_img_mt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/interest_detail_name_ml"
+                    android:layout_marginRight="@dimen/interest_detail_plr"
+                    android:text="途虎洗车十次"
+                    android:textColor="@color/interest_detail_name_text"
+                    android:textSize="@dimen/interest_detail_name_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img"
+                    app:layout_constraintTop_toTopOf="@+id/img"
+                    tools:text="途虎洗车十次"/>
+
+                <TextView
+                    android:id="@+id/tv_interest_des"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_interest_des_mt"
+                    android:lineSpacingMultiplier="1.1"
+                    android:text="购买此权益包可享受十次，总价值199元的洗车服务"
+                    android:textColor="@color/interest_detail_interest_des_text"
+                    android:textSize="@dimen/interest_detail_interest_des_text"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintStart_toStartOf="@+id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    tools:text="购买此权益包可享受十次，总价值199元的洗车服务"/>
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_price_mt"
+                    android:text="￥19.00"
+                    android:textColor="@color/interest_detail_price_text"
+                    android:textSize="@dimen/interest_detail_price_text"
+                    app:layout_constraintStart_toStartOf="@+id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_interest_des"
+                    tools:text="￥19.00"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sale_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已售999件 还剩10000件"
+                    android:textColor="@color/interest_detail_sale_record_text"
+                    android:textSize="@dimen/interest_detail_sale_record_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintTop_toTopOf="@+id/tv_price"
+                    tools:text="已售999件 还剩10000件"/>
+
+                <View
+                    android:id="@+id/v_space_top"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/interest_detail_space_h"
+                    android:layout_marginTop="@dimen/interest_detail_img_mb"
+                    android:background="@color/gray_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_price"/>
+
+                <TextView
+                    android:id="@+id/tv_use_time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_use_time_title_mt"
+                    android:text="@string/interest_detail_use_time_text"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="@dimen/interest_detail_use_time_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/v_space_top"/>
+
+                <TextView
+                    android:id="@+id/tv_use_time_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_use_time_value_mt"
+                    android:drawableLeft="@drawable/interest_detail_value_mark"
+                    android:drawablePadding="@dimen/interest_detail_use_time_value_dp"
+                    android:gravity="center_vertical"
+                    android:text="周一至周日 10:00-22:30"
+                    android:textColor="@color/interest_detail_use_time_value"
+                    android:textSize="@dimen/interest_detail_use_time_value"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_use_time_title"/>
+
+                <TextView
+                    android:id="@+id/tv_validity_period_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_validity_period_title_mt"
+                    android:text="@string/interest_detail_validity_period_text"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="@dimen/interest_detail_use_time_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_use_time_value"/>
+
+                <TextView
+                    android:id="@+id/tv_validity_period_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_use_time_value_mt"
+                    android:drawableLeft="@drawable/interest_detail_value_mark"
+                    android:drawablePadding="@dimen/interest_detail_use_time_value_dp"
+                    android:gravity="center_vertical"
+                    android:text="2018.12.13 至2019.1.13（周末 法定节假日通用）"
+                    android:textColor="@color/interest_detail_use_time_value"
+                    android:textSize="@dimen/interest_detail_use_time_value"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_validity_period_title"/>
+
+                <TextView
+                    android:id="@+id/tv_reservation_time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_validity_period_title_mt"
+                    android:text="@string/interest_detail_reservation_time_text"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="@dimen/interest_detail_use_time_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_validity_period_value"/>
+
+                <TextView
+                    android:id="@+id/tv_reservation_time_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_use_time_value_mt"
+                    android:drawableLeft="@drawable/interest_detail_value_mark"
+                    android:drawablePadding="@dimen/interest_detail_use_time_value_dp"
+                    android:gravity="center_vertical"
+                    android:text="提前两小时预约"
+                    android:textColor="@color/interest_detail_use_time_value"
+                    android:textSize="@dimen/interest_detail_use_time_value"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_reservation_time_title"/>
+
+                <TextView
+                    android:id="@+id/tv_use_rule_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_validity_period_title_mt"
+                    android:text="@string/interest_detail_use_rule_text"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="@dimen/interest_detail_use_time_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_reservation_time_value"/>
+
+                <TextView
+                    android:id="@+id/tv_use_rule_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_use_time_value_mt"
+                    android:drawablePadding="@dimen/interest_detail_use_time_value_dp"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="1.权益包用户不可同时享受其他优惠\n2.如部分菜品因时令或其他不可抗因素导致无法提供，商家会用 同等价位菜品替换，具体事宜与商家协商\n3.商家免费提供WIFI"
+                    android:textColor="@color/interest_detail_use_time_value"
+                    android:textSize="@dimen/interest_detail_use_time_value"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_use_rule_title"/>
+
+                <View
+                    android:id="@+id/v_bottom_line"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/line"
+                    android:layout_marginTop="@dimen/interest_detail_bottom_line_mt"
+                    android:background="@color/gray_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_use_rule_value"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_location"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_location_mt"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/v_bottom_line">
+
+                    <ImageView
+                        android:layout_width="@dimen/interest_detail_location_mark_w"
+                        android:layout_height="@dimen/interest_detail_location_mark_h"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/ic_location"/>
+
+                    <TextView
+                        android:id="@+id/tv_addr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/interest_detail_use_time_value_dp"
+                        android:text="武汉区洪山路洪山广场地下负一层(洪山广场地铁站B出口通道内）距您19.8km"
+                        android:textColor="@color/interest_detail_use_time_value"
+                        android:textSize="@dimen/interest_detail_phone_text"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/interest_detail_phone_mt"
+                    android:drawableLeft="@mipmap/ic_phone"
+                    android:drawablePadding="@dimen/interest_detail_use_time_value_dp"
+                    android:gravity="center_vertical"
+                    android:text="12345678901"
+                    android:textColor="@color/interest_detail_use_time_value"
+                    android:textSize="@dimen/interest_detail_phone_text"
+                    app:layout_constraintStart_toStartOf="@+id/img"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_location"/>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/interest_detail_bottom_space_h"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_phone"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

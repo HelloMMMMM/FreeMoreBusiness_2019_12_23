@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:maxHeight="300dip"
+    android:minWidth="300dip">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="42dip"
+        android:gravity="center_vertical"
+        android:text="驳回原因"
+        android:textColor="@color/text_dark_black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/ed_input"
+        android:layout_width="0dip"
+        android:layout_height="96dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:background="@drawable/publish_commodity_des_bg"
+        android:gravity="top|left"
+        android:hint="请输入..."
+        android:padding="8dip"
+        android:textColor="@color/text_light_black"
+        android:textColorHint="@color/text_light_gray"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dip"
+        android:layout_height="36dip"
+        android:layout_marginLeft="36dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="36dip"
+        android:background="@drawable/login_btn"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_input"/>
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="20dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_confirm"/>
+</android.support.constraint.ConstraintLayout>

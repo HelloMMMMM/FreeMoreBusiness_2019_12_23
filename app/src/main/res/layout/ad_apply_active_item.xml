@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.fx.feemore.business.bean.ActiveBean"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="96dip"
+        android:background="@android:color/white"
+        android:minHeight="96dip">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="94dip"
+            android:layout_height="69dip"
+            android:layout_marginLeft="15dip"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/fl_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="15dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ic_reject_mark"
+                android:drawablePadding="5dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="属于你的汽车套餐"
+                android:textColor="@color/text_dark_black"
+                android:textSize="15sp"
+                />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="申请时间 2018-12-06 14:00"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img"
+            app:layout_constraintEnd_toEndOf="@+id/fl_name"
+            app:layout_constraintStart_toStartOf="@+id/fl_name"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="一站式服务，洗车，打蜡，美容...豪华套餐等你来选!"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_time"
+            app:layout_constraintEnd_toEndOf="@+id/fl_name"
+            app:layout_constraintStart_toStartOf="@+id/fl_name"
+            app:layout_constraintTop_toBottomOf="@+id/fl_name"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>
